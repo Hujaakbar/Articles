@@ -172,8 +172,6 @@ END;
 Call post_on_slack('Hello Slack!')
 ```
 
-https://hooks.slack.com/services/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
-
 ---
 #### Useful links：
 
