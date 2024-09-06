@@ -25,6 +25,7 @@ But from the Slack side it is webhook (reverse API call) i.e, asking Snowflake t
 
 1. #### Creating a channel for testing purposes (optional)
     1. Login to Slack, From Sidebar on the left click on "Add channels" button
+       
         ![add channel](./images/add_channel.PNG)
         <br/>
     1. Enter channel name
