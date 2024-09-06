@@ -24,12 +24,15 @@ Snowflake 側から見ると、これは通常の API 呼び出しであり、Sl
 
 1. #### テストの為にチャネルを作る
     1. Slackにロギンし、左側のsidebarから「Add channels」ボタンを押し
+       
         ![add channel](./images/add_channel.PNG)
         <br/>
     1. チャネル名を入力
+       
         ![enter channel name](./images/channel_name.PNG)
         <br/>
     1. チャンネルの公開範囲は公開か非公開か決める
+       
         ![channel visibility](./images/channel_privacy.PNG)
         <br/>
     1. 「Create」ボタンを押し
@@ -38,46 +41,54 @@ Snowflake 側から見ると、これは通常の API 呼び出しであり、Sl
 
 1. #### Slackでアプリを作る
     1. [アプリを作成するページ](https://api.slack.com/apps)を開く
-    <br/>
+        <br/>
+    1. Create App ボタンを押し       
+        ![Create app image](./images/create_app.PNG)
+       <br/>
+    1. From Scratch オプションを選択       
+        ![From Scrach](./images/from_scrach.PNG)
+        <br/>
+    1. アプリ名を入力しWorkspaceを選択       
+        ![Enter Aoo name and choose workspace](./images/app_name_and_workspace.PNG)
     1. Create App ボタンを押し
-    ![Create app image](./images/create_app.PNG)
-    <br/>
-    1. From Scratch オプションを選択
-    ![From Scrach](./images/from_scrach.PNG)
-    <br/>
-    1. アプリ名を入力しWorkspaceを選択
-    ![Enter Aoo name and choose workspace](./images/app_name_and_workspace.PNG)
-    1. Create App ボタンを押し
-    <br/>
+        <br/>
 
 
 1. #### Slackアプリをチャネルに導入
     1.  アプリの設定ページの左側にある「Incoming webhooks」を押し
-    ![incoming webhooks](./images/incoming_webhooks.PNG)
-    _作ったアプリのページを見つけれないなら、アプリdashbordに行ってください。_
-    _リンク： [Slack app dashboard](https://api.slack.com/apps)_
-    <br/>
+       
+        ![incoming webhooks](./images/incoming_webhooks.PNG)
+       
+        _作ったアプリのページを見つけれないなら、アプリdashbordに行ってください。_
+       
+        _リンク： [Slack app dashboard](https://api.slack.com/apps)_
+        <br/>
     1. 「Activate Incoming Webhook」をトグルしてください。
-    ![Activate incoming webhook](./images/activate_incoming_webhook.PNG)
-    <br/>
+       
+        ![Activate incoming webhook](./images/activate_incoming_webhook.PNG)
+        <br/>
     1. 一番下にある[Add New Webhook to Workspace]ボタンを押してください
-    ![Add New Webhook to Workspace](./images/add_new_workspace.PNG)
-    <br/>
+       
+        ![Add New Webhook to Workspace](./images/add_new_workspace.PNG)
+        <br/>
     1. 導入したいチャネルを選択し、「Allow」ボタンを押してください
-    ![select channel](./images/select_channel.PNG)
-    <br/>
-    アプリをチャネルに導入した後に、チャネルに確認のメッセージが来る
-    ![app_integrated](./images/app_integrated.PNG)
-    <br/>
+       
+        ![select channel](./images/select_channel.PNG)
+        <br/>
+        アプリをチャネルに導入した後に、チャネルに確認のメッセージが来る
+    
+        ![app_integrated](./images/app_integrated.PNG)
+        <br/>
 
 1. #### アプリのwebhook URLを取る
     アプリをチャネルに導入/繋ぐ後に、アプリの設定ページに戻ってきます。
     アプリの設定ページのIncoming Webhooksセクションの下に
     作成された「Webhook Url」をコピーしてください。
+   
     ![Copy Webhook Url](./images/webhook_url.PNG)
 
-__Note:__ 各チャネルは自分の特別な Webhook Urlがあります。
-と言うのは、テストの後に、アプリを本当のチャネルに導入したら、そのチャネルのWebhook Urlを使うべきです。
+    __Note:__ 各チャネルは自分の特別な Webhook Urlがあります。
+    と言うのは、テストの後に、アプリを本当のチャネルに導入したら、そのチャネルのWebhook Urlを使うべきです。
 
 
 
@@ -128,7 +139,7 @@ __Note:__ 各チャネルは自分の特別な Webhook Urlがあります。
 
     `SNOWFLAKE_WEBHOOK_SECRET`と`SNOWFLAKE_WEBHOOK_MESSAGE`はsecretとメッセージの**プレースホルダー**です。
   
-  <br/>
+      <br/>
 
 1. #### NOTIFICATION INTEGRATIONを使う（呼ぶ）
 
@@ -142,37 +153,37 @@ __Note:__ 各チャネルは自分の特別な Webhook Urlがあります。
     );
     ```
 
-[`SNOWFLAKE.NOTIFICATION.SANITIZE_WEBHOOK_CONTENT`](https://docs.snowflake.com/en/sql-reference/functions/sanitize_webhook_content)関数は送信される通知メッセージの本文からプレースホルダー (たとえば、シークレットを指定する SNOWFLAKE_WEBHOOK_SECRET プレースホルダー) を削除します。
-この関数が使用されず、メッセージ本文にシークレットのプレースホルダーが含まれている場合、メッセージが Slack Webhook に送信されると、シークレットを含むメッセージが Slack チャネルに投稿される可能性があります。
-
-残りの関数は、NOTIFICATION INTEGRATIONを使用してメッセージを送信するために使用される設定関数です。
-
-##### 結果
-
-![final_result](./images/final_result.PNG)
-
-<br/>
-
-もし上のように4つのStored Procedureと関数を使ってNOTIFICATION INTEGRATIONを呼ぶ事をもっと簡単にしたいなら、wrapper Stored Procedureを作成出来ます。
-
-例：
-
-```SQL
-CREATE OR REPLACE PROCEDURE post_on_slack(message)
-RETURNS FLOAT
-LANGUAGE SQL
-AS
-BEGIN
-  CALL SYSTEM$SEND_SNOWFLAKE_NOTIFICATION(
-        SNOWFLAKE.NOTIFICATION.TEXT_PLAIN(
-            SNOWFLAKE.NOTIFICATION.SANITIZE_WEBHOOK_CONTENT(message)
-        ),
-        SNOWFLAKE.NOTIFICATION.INTEGRATION('my_slack_webhook_int')
-    );
-END;
-
-Call post_on_slack('Hello Slack!')
-```
+    [`SNOWFLAKE.NOTIFICATION.SANITIZE_WEBHOOK_CONTENT`](https://docs.snowflake.com/en/sql-reference/functions/sanitize_webhook_content)関数は送信される通知メッセージの本文からプレースホルダー (たとえば、シークレットを指定する SNOWFLAKE_WEBHOOK_SECRET プレースホルダー) を削除します。
+    この関数が使用されず、メッセージ本文にシークレットのプレースホルダーが含まれている場合、メッセージが Slack Webhook に送信されると、シークレットを含むメッセージが Slack チャネルに投稿される可能性があります。
+    
+    残りの関数は、NOTIFICATION INTEGRATIONを使用してメッセージを送信するために使用される設定関数です。
+    
+    ##### 結果
+    
+    ![final_result](./images/final_result.PNG)
+    
+    <br/>
+    
+    もし上のように4つのStored Procedureと関数を使ってNOTIFICATION INTEGRATIONを呼ぶ事をもっと簡単にしたいなら、wrapper Stored Procedureを作成出来ます。
+    
+    例：
+    
+    ```SQL
+    CREATE OR REPLACE PROCEDURE post_on_slack(message)
+    RETURNS FLOAT
+    LANGUAGE SQL
+    AS
+    BEGIN
+      CALL SYSTEM$SEND_SNOWFLAKE_NOTIFICATION(
+            SNOWFLAKE.NOTIFICATION.TEXT_PLAIN(
+                SNOWFLAKE.NOTIFICATION.SANITIZE_WEBHOOK_CONTENT(message)
+            ),
+            SNOWFLAKE.NOTIFICATION.INTEGRATION('my_slack_webhook_int')
+        );
+    END;
+    
+    Call post_on_slack('Hello Slack!')
+    ```
 
 ---
 #### 役に立つリンク：
