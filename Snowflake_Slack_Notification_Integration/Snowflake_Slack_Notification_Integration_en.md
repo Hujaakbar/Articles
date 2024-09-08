@@ -29,10 +29,13 @@ But from the Slack side it is webhook (reverse API call) i.e, asking Snowflake t
         ![add channel](./images/add_channel.PNG)
         <br/>
     1. Enter channel name
+       
         ![enter channel name](./images/channel_name.PNG)
         <br/>
     1. Choose channel visibility
+       
         ![channel visibility](./images/channel_privacy.PNG)
+       
         **public** channels are visible to everyone within the workspace.
         **private** channels are visible to people who are invited.
         <br/>
@@ -42,43 +45,55 @@ But from the Slack side it is webhook (reverse API call) i.e, asking Snowflake t
 
 1. #### Creating Slack App
     1. Open Slack Apps's [Dashboard page](https://api.slack.com/apps)
-    <br/>
+        <br/>
     1. Click on "Create App" button
-    ![Create app image](./images/create_app.PNG)
-    <br/>
+       
+        ![Create app image](./images/create_app.PNG)
+        <br/>
     1. Select "From Scratch" option
-    ![From Scrach](./images/from_scrach.PNG)
-    <br/>
+       
+        ![From Scrach](./images/from_scrach.PNG)
+        <br/>
     1. Enter App name and choose Workspace from drop-down
-    ![Enter Aoo name and choose workspace](./images/app_name_and_workspace.PNG)
+       
+        ![Enter Aoo name and choose workspace](./images/app_name_and_workspace.PNG)
+       <br/>
     1. Click "Create App" button
-    <br/>
+        <br/>
 
 
 1. ####  Integrating the app to the channel
     1.  On the App settings page, click "Incoming webhooks" link on the left sidebar
-    ![incoming webhooks](./images/incoming_webhooks.PNG)
-    _If you had closed the tab, you can find your app from [Slack app dashboard](https://api.slack.com/apps)_
-    <br/>
+       
+        ![incoming webhooks](./images/incoming_webhooks.PNG)
+        
+        _If you had closed the tab, you can find your app from [Slack app dashboard](https://api.slack.com/apps)_
+        <br/>
     1. Toogle on "Activate Incoming Webhooks"
-    ![Activate incoming webhook](./images/activate_incoming_webhook.PNG)
-    <br/>
+       
+        ![Activate incoming webhook](./images/activate_incoming_webhook.PNG)
+        <br/>
     1. Go to the bottom and click "Add New Webhook to Workspace" button
-    ![Add New Webhook to Workspace](./images/add_new_workspace.PNG)
-    <br/>
+       
+        ![Add New Webhook to Workspace](./images/add_new_workspace.PNG)
+        <br/>
     1. Choose the channel you want to connect the app to and click "Allow" button
-    ![select channel](./images/select_channel.PNG)
-   <br/>
-    After Integration on the channel you can see the new message confirming it
-    ![app_integrated](./images/app_integrated.PNG)
-    <br/>
+       
+        ![select channel](./images/select_channel.PNG)
+       <br/>
+        After Integration on the channel you can see the new message confirming it
+       
+        ![app_integrated](./images/app_integrated.PNG)
+        <br/>
 
 1. #### Getting App's webhook URL
-    On App's settings page Incoming Webhooks section go to bottom and copy "Webhook Url", we will use it soon. 
+   
+    On App's settings page Incoming Webhooks section go to bottom and copy "Webhook Url", we will use it soon.
+   
     ![Copy Webhook Url](./images/webhook_url.PNG)
 
-__Note:__ App integration to a channel creates a unique Webhook Url for each channel。
-What it means is that if you want to send messages to a different Slack channel from Snowflake, that channel should also be connected to the app and uniqly generated Webhook URL for that channel should be used on the Snowflake side.
+    __Note:__ App integration to a channel creates a unique Webhook Url for each channel。
+    What it means is that if you want to send messages to a different Slack channel from Snowflake, that channel should also be connected to the app and uniqly generated Webhook URL for that channel should be used on the Snowflake side.
 
 
 ---
@@ -127,7 +142,7 @@ What it means is that if you want to send messages to a different Slack channel 
 
     `SNOWFLAKE_WEBHOOK_SECRET`and`SNOWFLAKE_WEBHOOK_MESSAGE`は**placeholders** for a secret (in our case Webhook url token) and a message. 
   
-  <br/>
+      <br/>
 
 1. #### NOTIFICATION INTEGRATIONを使う（呼ぶ）
 
@@ -141,42 +156,42 @@ What it means is that if you want to send messages to a different Slack channel 
         );
     ```
 
-[`SNOWFLAKE.NOTIFICATION.SANITIZE_WEBHOOK_CONTENT`](https://docs.snowflake.com/en/sql-reference/functions/sanitize_webhook_content) removes placeholders (for example, the SNOWFLAKE_WEBHOOK_SECRET placeholder, which specifies a secret) from the body of a notification message to be sent.
-If this function is not used and the message body contains a placeholder for a secret, then when a message is sent to a Slack webhook, a message containing a secret will be exposed to the Slack channel.
-
-The rest are set functions to be used with NOTIFICATION INTEGRATION to send a message. 
-
-##### Result
-
-![final_result](./images/final_result.PNG)
-
-<br/>
-
-If calling 4 functions and stored procedures every time to send a message to a Slack is bothersome, a wrapper stored procedure can be used to simplify the process. 
-
-例：
-
-```SQL
-CREATE OR REPLACE PROCEDURE post_on_slack(message)
-RETURNS FLOAT
-LANGUAGE SQL
-AS
-BEGIN
-  CALL SYSTEM$SEND_SNOWFLAKE_NOTIFICATION(
-        SNOWFLAKE.NOTIFICATION.TEXT_PLAIN(
-            SNOWFLAKE.NOTIFICATION.SANITIZE_WEBHOOK_CONTENT(message)
-        ),
-        SNOWFLAKE.NOTIFICATION.INTEGRATION('my_slack_webhook_int')
-    );
-END;
-
-Call post_on_slack('Hello Slack!')
-```
+    [`SNOWFLAKE.NOTIFICATION.SANITIZE_WEBHOOK_CONTENT`](https://docs.snowflake.com/en/sql-reference/functions/sanitize_webhook_content) removes placeholders (for example, the SNOWFLAKE_WEBHOOK_SECRET placeholder, which specifies a secret) from the body         of a notification message to be sent.
+    If this function is not used and the message body contains a placeholder for a secret, then when a message is sent to a Slack webhook, a message containing a secret will be exposed to the Slack channel.
+    
+    The rest are set functions to be used with NOTIFICATION INTEGRATION to send a message. 
+    
+    ##### Result
+    
+    ![final_result](./images/final_result.PNG)
+    
+    <br/>
+    
+    If calling 4 functions and stored procedures every time to send a message to a Slack is bothersome, a wrapper stored procedure can be used to simplify the process. 
+    
+    例：
+    
+    ```SQL
+    CREATE OR REPLACE PROCEDURE post_on_slack(message)
+    RETURNS FLOAT
+    LANGUAGE SQL
+    AS
+    BEGIN
+      CALL SYSTEM$SEND_SNOWFLAKE_NOTIFICATION(
+            SNOWFLAKE.NOTIFICATION.TEXT_PLAIN(
+                SNOWFLAKE.NOTIFICATION.SANITIZE_WEBHOOK_CONTENT(message)
+            ),
+            SNOWFLAKE.NOTIFICATION.INTEGRATION('my_slack_webhook_int')
+        );
+    END;
+    
+    Call post_on_slack('Hello Slack!')
+    ```
 
 ---
 #### Useful links：
 
-- [creating Slack app](https://api.slack.com/quickstart)
+- [Creating Slack app](https://api.slack.com/quickstart)
 - [Webhook urls on Slack](https://api.slack.com/messaging/webhooks)
 - [Creating Webhook Notification on Snowflake](https://docs.snowflake.com/en/user-guide/notifications/webhook-notifications)
 
