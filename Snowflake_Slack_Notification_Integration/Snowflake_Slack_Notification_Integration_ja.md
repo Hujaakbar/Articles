@@ -23,6 +23,7 @@ Snowflake 側から見ると、これは通常の API 呼び出しであり、Sl
 
 
 1. #### テストの為にチャネルを作る
+   
     1. Slackにロギンし、左側のsidebarから「Add channels」ボタンを押し
        
         ![add channel](./images/add_channel.PNG)
@@ -39,22 +40,29 @@ Snowflake 側から見ると、これは通常の API 呼び出しであり、Sl
     <br/>
 
 
+
 1. #### Slackでアプリを作る
+   
     1. [アプリを作成するページ](https://api.slack.com/apps)を開く
         <br/>
-    1. Create App ボタンを押し       
+    1. Create App ボタンを押し
+             
         ![Create app image](./images/create_app.PNG)
        <br/>
-    1. From Scratch オプションを選択       
+    1. From Scratch オプションを選択
+             
         ![From Scrach](./images/from_scrach.PNG)
         <br/>
-    1. アプリ名を入力しWorkspaceを選択       
+    1. アプリ名を入力しWorkspaceを選択
+       
         ![Enter Aoo name and choose workspace](./images/app_name_and_workspace.PNG)
+        <br/>
     1. Create App ボタンを押し
         <br/>
 
 
 1. #### Slackアプリをチャネルに導入
+   
     1.  アプリの設定ページの左側にある「Incoming webhooks」を押し
        
         ![incoming webhooks](./images/incoming_webhooks.PNG)
@@ -81,6 +89,7 @@ Snowflake 側から見ると、これは通常の API 呼び出しであり、Sl
         <br/>
 
 1. #### アプリのwebhook URLを取る
+   
     アプリをチャネルに導入/繋ぐ後に、アプリの設定ページに戻ってきます。
     アプリの設定ページのIncoming Webhooksセクションの下に
     作成された「Webhook Url」をコピーしてください。
@@ -143,7 +152,7 @@ Snowflake 側から見ると、これは通常の API 呼び出しであり、Sl
 
 1. #### NOTIFICATION INTEGRATIONを使う（呼ぶ）
 
- 
+
     ```SQL
     CALL SYSTEM$SEND_SNOWFLAKE_NOTIFICATION(
         SNOWFLAKE.NOTIFICATION.TEXT_PLAIN(
