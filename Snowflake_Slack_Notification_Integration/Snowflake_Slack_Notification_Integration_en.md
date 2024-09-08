@@ -1,5 +1,7 @@
 # Posting messages on Slack from Snowflake
 
+![snowflake](./images/snowflake.jpg)
+
 Using Snowflake's NOTIFICATION INTEGRATION function and Slack's Webhooks feature it is possible to send messages to Slack from Snowflake.
 This method can be used to send messages to Microsoft Teams and PagerDuty as well.
 
