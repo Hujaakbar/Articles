@@ -2,10 +2,10 @@
 
 ![snowflake Dynamic table](./images/dynamic_table.drawio.png)
 
-> **TL;DR:** Dynamic tables are tables with in-built syncing capability. On the dynamic table definition you define the source tables, what data to sync and how often to sync.
+**TL;DR:** Dynamic tables are tables with in-built syncing capability. On the dynamic table definition you define the source tables, what data to sync and how often to sync.
 
 Dynamic tables are used to transform data in a reliable, and automated way.
-You define the source table, write sql query to select what data to sync,and set frequency to sync. Snowflake takes care of the rest. When the underlying data on which the dynamic table is based on changes, the table is updated to reflect those changes. These updates are automated and referred to as a "refresh".
+You define the source table, write SQL query to select what data to sync,and set frequency to sync. Snowflake takes care of the rest. When the underlying data on which the dynamic table is based on changes, the table is updated to reflect those changes. These updates are automated and referred to as a "refresh".
 
 Source of the dynamic table can be multiple tables and even another dynamic table.
 
@@ -31,7 +31,7 @@ Dynamic tables rely on change tracking on base tables to notice changes, if chan
 > ```SQL
 > CREATE OR REPLACE products
 > ...
-> CHANGE_TRACKING = TRUE 
+> CHANGE_TRACKING = TRUE
 > ;
 > ```
 >
@@ -51,7 +51,7 @@ Syncing data between source table and dynamic tables operates in one of two ways
 **Note:** A dynamic table’s refresh mode is determined at creation time and is immutable afterward.
 
  **Target lag:**
-You can define either the data should be synced as soon as the source table changes (within a minute) or certain time after the source table changes. It is called 'target lag'. **Target lag** is the maximum amount of time that the dynamic table’s content should lag behind updates to the base tables.By setting target lag it is possible to optimize cost efficiency. For example, if the target lag is set to 2 hours, on the first 30 minutes 10 new rows were inserted into the base table, and after another another 30 rows were inserted. This way instead of performing syncing process twice, every time the data changes, syncing process was performed only once, within 2 hours of the first changes. Note it is different from Cron scheduling, this 2 hour lag time does not mean syncing happens every 2 hours, rather it means syncing happens within 2 hours of first changes.
+You can define either the data should be synced as soon as the source table changes (within a minute) or certain time after the source table changes. It is called 'target lag'. **Target lag** is the maximum amount of time that the dynamic table’s content should lag behind updates to the base tables. By setting target lag it is possible to optimize cost efficiency. For example, if the target lag is set to 2 hours, on the first 30 minutes 10 new rows were inserted into the base table, and after another another 30 rows were inserted. This way instead of performing syncing process twice, every time the data changes, syncing process was performed only once, within 2 hours of the first changes. Note it is different from Cron scheduling, this 2 hour lag time does not mean syncing happens every 2 hours, rather it means syncing happens within 2 hours of first changes.
 
 Below example　sets the orders dynamic table's refresh lag to two hours:
 
@@ -70,7 +70,7 @@ CREATE OR REPLACE DYNAMIC TABLE order
   WAREHOUSE = warehouse_xl
   REFRESH_MODE = INCREMENTAL
   AS
-    SELECT order_id, order_source 
+    SELECT order_id, order_source
     FROM staging_table
     WHERE order_origin = 'America';
 ```
