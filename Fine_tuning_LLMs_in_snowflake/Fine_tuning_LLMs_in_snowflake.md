@@ -105,7 +105,7 @@ Example:
 
 ```SQL
 SELECT SNOWFLAKE.CORTEX.COMPLETE('my_super_llama',
-    'What is the strategy of my imaginary company for fiscal year 2024-2025?');
+    'What is the core principle of our ABC company?');
 ```
 
 ## Necessary Privileges
