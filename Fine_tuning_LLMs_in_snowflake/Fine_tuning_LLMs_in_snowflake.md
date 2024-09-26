@@ -1,5 +1,7 @@
 # Fine-tuning LLMs in Snowflake
 
+![Machine Learning](./images/machine_learning.png)
+
 **TL;DR:**
 Cortex Fine-tuning is a fully managed service that lets you fine-tune popular LLMs using your data, all within Snowflake.
 
@@ -102,8 +104,8 @@ SNOWFLAKE.CORTEX.COMPLETE(
 Example:
 
 ```SQL
-SELECT SNOWFLAKE.CORTEX.COMPLETE('my_super_llama', 
-    'What is the strategy of my imaginary company for fiscal year 2024-2025?');
+SELECT SNOWFLAKE.CORTEX.COMPLETE('my_super_llama',
+    'What is the core principle of our ABC company?');
 ```
 
 ## Necessary Privileges
@@ -131,7 +133,7 @@ There is another method too to achieve the same goal called Retrieval Augmented 
 RAG is an LLM optimization method introduced by Meta in 2020.
 
 So what is the difference between the two in simple words?
-Fine-tuning is retraining the base model on a specific domain. We can think of it making a base model smarter with regard to specific domain such as medicine, or philosophy.
+Fine-tuning is retraining the base model on a specific domain. We can think of it making a base model smarter with regard to specific domain such as medicine, or philosophy by enabling it to discover patterns/associations in a more specific field.
 
 RAG is providing relevant information to a LLM with prompting it.
 When user submits a prompt to a LLM that has RAG, the process unfolds in the following way:
