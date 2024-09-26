@@ -1,5 +1,7 @@
 # Git のワークフロー
 
+![git workflow](./images/cover.png)
+
 Git は人気なバージョン管理するツールです。色々な人は Git の使い方を良く知っていますが、Git を仕事やワークフローに統合する方法を余り良く知らない人もいます。この記事は Git をワークフローに統合する 9 方法を説明します。
 
 1. [Centralized Workflow](#centralized-workflow)
