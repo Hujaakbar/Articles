@@ -1,0 +1,292 @@
+/* Mobile screen size styles */
+html {
+    --small_border_radius: 5px;
+    --medium_border_radius: 7px;
+    --large_border_radius: 15px;
+
+    --text_align: center;
+
+    --small_grid_body: 1fr minmax(5rem, 2fr) 1fr;
+    --medium_grid_body: 1fr minmax(5rem, 4fr) 1fr;
+    --large_grid_body: 1fr minmax(5rem, 6fr) 1fr;
+}
+
+img {
+    border-radius: var(--small_border_radius);
+}
+
+/* mermaid graphs */
+pre[class*='language-'] {
+    border-radius: var(--medium_border_radius);
+    box-sizing: border-box;
+    /* code snippets */
+    &:has(code) {
+        padding: 1.5em;
+        line-height: 1.8;
+    }
+}
+
+/* images of post snippets  */
+.post-outer .snippet-thumbnail {
+    border-radius: var(--medium_border_radius);
+}
+
+#comments.embed[data-num-comments='0'] {
+    padding-top: 2rem;
+}
+
+@media screen and (max-width: 968px) {
+    body.item-view .Blog .post-title-container {
+        padding: 62px 24px 54px 24px;
+    }
+
+    /* the header element of the filter page (when posts are selected based on labels or published date */
+    .post-filter-message {
+        margin: 24px 0 48px 0;
+        padding: 15px 30px;
+    }
+}
+
+@media screen and (width > 1150px) {
+    /* top header that contains the blog name, "Cherry Peeked", navigation etc */
+    div.centered-top {
+        display: grid;
+        grid-template-columns: var(--large_grid_body);
+        padding: 44px 0 32px 0;
+
+        & div.centered-top-firstline.container {
+            grid-row: 1;
+            grid-column: 2/3;
+        }
+
+        & > nav {
+            grid-row: 2;
+            grid-column: 2 / 3;
+        }
+    }
+
+    .main_content_container {
+        display: grid;
+        grid-template-columns: var(--large_grid_body);
+        width: 100%;
+        margin: 0;
+        max-width: 100%;
+
+        & .page {
+            grid-column: 2 / 3;
+            justify-self: center;
+        }
+
+        /* side of the entire page, not a post */
+        & .sidebar-container {
+            grid-column: 1 / 2;
+            grid-row: 1;
+            justify-self: center;
+            z-index: 0;
+        }
+
+        & pre:has(> code.mermaid),
+        & p:has(> img) {
+            text-align: var(--text_align);
+        }
+    }
+
+    /* since starting width 1150px the container uses grid,
+    post-title does not spread entire screen widths, hence using border-radius */
+    body.item-view .Blog .post-title-container {
+        border-radius: var(--small_border_radius);
+        padding-bottom: 5rem;
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+
+    /* the subheader that contains published date of the post */
+    body.item-view .Blog .post-header-container {
+        display: grid;
+        grid-template-columns: var(--medium_grid_body);
+        padding-left: 0;
+        padding-right: 0;
+
+        & .post-header {
+            grid-column: 2 / 3;
+        }
+    }
+
+    /* -------------- POST BODY ------------------- */
+
+    div.post-body-container,
+    div.post-body.entry-content {
+        max-width: 100%;
+        overflow: auto;
+    }
+
+    body.item-view .Blog .post-body-container {
+        display: grid;
+        grid-template-columns: var(--medium_grid_body);
+        margin-right: 0;
+        padding-right: 0;
+        margin-left: 0;
+
+        & .post-sidebar {
+            /* position: static;
+            padding-top: 12px;
+            order: 1; */
+            width: 0;
+            display: none;
+        }
+
+        & .post-body {
+            grid-column: 2 / 3;
+            justify-self: center;
+            margin-right: 0;
+        }
+    }
+
+    /* Post Bottom that contains share button only */
+    body.item-view .widget.Blog div.post-bottom {
+        display: grid;
+        grid-template-columns: var(--medium_grid_body);
+        margin: 0;
+
+        & div.post-share-buttons.post-share-buttons-bottom {
+            justify-self: end;
+
+            & .flat-button {
+                font: 600 16px Open Sans, sans-serif;
+                border-radius: var(--medium_border_radius);
+                padding: 0.5rem 1.2rem;
+                margin-right: 0.5rem;
+            }
+        }
+    }
+
+    /* -------------------------------------------- */
+    /*  on the landing page of the blog, heroPost is the feature post */
+    div.heroPost {
+        & div.big-post-title {
+            border-top-left-radius: 10px;
+            border-bottom-left-radius: 10px;
+        }
+
+        & a.big-post-image {
+            border-top-right-radius: 10px;
+            border-bottom-right-radius: 10px;
+        }
+    }
+
+    /* -------------------------------------------- */
+    /* the header element of the filter page (when posts are selected based on labels or published date */
+    .post-filter-message {
+        font: 600 18px Open Sans, sans-serif;
+        margin: 40px 106px 48px 106px;
+        padding: 30px 40px;
+        border-radius: var(--small_border_radius);
+    }
+
+    /* Post title */
+    h3.post-title.entry-title:not(:has(a)) {
+        text-align: var(--text_align);
+        text-wrap: pretty;
+    }
+
+    /* let the code to be scrollable when it is longer than its container */
+    pre[class*='language-']:has(code) {
+        white-space: pre; /* Ensure no wrapping inside the pre */
+        max-width: 100%; /* Ensure it stays within its container */
+        overflow: auto; /* Allow scrolling if the content is too long */
+        border-radius: var(--large_border_radius);
+    }
+
+    img {
+        border-radius: var(--medium_border_radius);
+    }
+
+    /* ------------------------------------ */
+    /* SCROLLBAR */
+    /* Change scrollbar color to white and scrollbar thumb color to green to match with the theme  */
+    html {
+        scrollbar-width: 10px;
+        scrollbar-gutter: 10px;
+        scrollbar-track-color: #f5f5f5;
+    }
+
+    ::-webkit-scrollbar-track {
+        -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.1);
+        background-color: #f5f5f5;
+        border-radius: var(--medium_border_radius);
+    }
+
+    ::-webkit-scrollbar {
+        background-color: #f5f5f5;
+        width: 10px;
+    }
+
+    ::-webkit-scrollbar:horizontal {
+        height: 8px;
+    }
+
+    ::-webkit-scrollbar-thumb {
+        border-radius: var(--medium_border_radius);
+        -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+        background-color: #e2e2e2;
+    }
+
+    ::-webkit-scrollbar-thumb:active,
+    ::-webkit-scrollbar-thumb:hover {
+        background-color: #62c8b2;
+    }
+
+    /* ---------------------------- */
+}
+
+@media screen and (width > 1281px) {
+    /* top header that contains the blog name, "Cherry Peeked", navigation etc */
+    div.centered-top {
+        padding-left: 10rem;
+        padding-right: 10rem;
+    }
+
+    body.item-view .Blog .post-title-container {
+        border-radius: var(--medium_border_radius);
+        padding-bottom: 106px;
+    }
+
+    img {
+        border-radius: var(--large_border_radius);
+    }
+}
+
+/* Styles that affect all screen sizes */
+
+/* make the cover image width 100%  */
+body.item-view .post-body-container :is(p, h1):first-of-type img {
+    width: 100%;
+}
+
+/* style header of the blog post (page), not the title of the blog snippets */
+h3.post-title.entry-title:not(:has(a)) {
+    text-align: var(--text_align);
+    text-wrap: pretty;
+    line-height: 1.6;
+}
+
+/* hide blogger logo from footer */
+footer div.blogger {
+    display: none;
+}
+
+/* for "page does not exist" message */
+div.status-msg-body {
+    margin: 1rem;
+    text-align: var(--text_align);
+    text-wrap: pretty;
+}
+
+/* custom generic styles to be used just in case */
+.hundred {
+    width: 100%;
+}
+
+.center {
+    text-align: center;
+}
