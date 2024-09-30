@@ -154,6 +154,6 @@ limit {{ row_count }};
 
 ![sql code2](./images/sql_code2.PNG)
 
-Streamlitはインテラクティブなので、Streamlitのデータの価値が変わったら、Streamlitのデータを使っているSQLセルが自動的に再実行されります。
+Streamlitはインテラクティブなので、Streamlitのデータの価値が変わったら、Streamlitのセルから下にアル全てのセルが自動的に再実行されります。
 
 ![python_code7](./images/python_code7.PNG)
