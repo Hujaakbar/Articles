@@ -1,6 +1,6 @@
 # Git のワークフロー
 
-![git workflow](./images/cover.png)
+![git workflow](https://github.com/Hujaakbar/Articles/raw/japanese/Git_Workflows/images/cover.png)
 
 Git は人気なバージョン管理するツールです。色々な人は Git の使い方を良く知っていますが、Git を仕事やワークフローに統合する方法を余り良く知らない人もいます。この記事は Git をワークフローに統合する 9 方法を説明します。
 
@@ -86,12 +86,12 @@ graph TD;
 </br>
 
 地図 1
-![Feature branching](./images/FeatureBranching01.svg)
+![Feature branching](https://github.com/Hujaakbar/Articles/raw/japanese/Git_Workflows/images/FeatureBranching01.svg)
 source: [https://www.atlassian.com/git/tutorials/comparing-workflows/feature-branch-workflow](https://www.atlassian.com/git/tutorials/comparing-workflows/feature-branch-workflow)
 </br>
 
 地図 2
-![Feature branching](./images/feature_branch_development.png)
+![Feature branching](https://github.com/Hujaakbar/Articles/raw/japanese/Git_Workflows/images/feature_branch_development.png)
 source: [https://www.optimizely.com/optimization-glossary/trunk-based-development/](https://www.optimizely.com/optimization-glossary/trunk-based-development/)
 </br>
 
@@ -135,7 +135,7 @@ GitHub Flow と似ている、二つの違いさがある
 **地図：**
 </br>
 
-![Trunk Based Development](./images/trunk_based_development.png)
+![Trunk Based Development](https://github.com/Hujaakbar/Articles/raw/japanese/Git_Workflows/images/trunk_based_development.png)
 source: [https://www.optimizely.com/optimization-glossary/trunk-based-development/](https://www.optimizely.com/optimization-glossary/trunk-based-development/)
 
 ---
@@ -171,17 +171,17 @@ source: [https://www.optimizely.com/optimization-glossary/trunk-based-developmen
 </br>
 
 地図 1
-![Git Flow](./images/GitFlow1.svg)
+![Git Flow](https://github.com/Hujaakbar/Articles/raw/japanese/Git_Workflows/images/GitFlow1.svg)
 source: [https://www.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow](https://www.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow)
 </br>
 
 地図 2
-![Git Flow](./images/gitFlow2.svg)
+![Git Flow](https://github.com/Hujaakbar/Articles/raw/japanese/Git_Workflows/images/gitFlow2.svg)
 source: [https://www.gitkraken.com/learn/git/git-flow](https://www.gitkraken.com/learn/git/git-flow)
 </br>
 
 地図 3
-![Git Flow](./images/originalGitFlow.png)
+![Git Flow](https://github.com/Hujaakbar/Articles/raw/japanese/Git_Workflows/images/originalGitFlow.png)
 source: <https://nvie.com/posts/a-successful-git-branching-model/>
 
 ---
@@ -211,11 +211,11 @@ source: <https://nvie.com/posts/a-successful-git-branching-model/>
 **地図：**
 </br>
 
-![Enhanced Git Flow](./images/enhancedGitflow.png)
+![Enhanced Git Flow](https://github.com/Hujaakbar/Articles/raw/japanese/Git_Workflows/images/enhancedGitflow.png)
 source: <https://www.toptal.com/gitflow/enhanced-git-flow-explained>
 </br>
 
-![Enhanced Git Flow](./images/enhancedGitflow2.png)
+![Enhanced Git Flow](https://github.com/Hujaakbar/Articles/raw/japanese/Git_Workflows/images/enhancedGitflow2.png)
 source: <https://www.toptal.com/gitflow/enhanced-git-flow-explained>
 
 ---
@@ -300,7 +300,7 @@ gitGraph
 </br>
 
 地図 2
-![Git Feature Flow](./images/GitFeautreFlow.webp)
+![Git Feature Flow](https://github.com/Hujaakbar/Articles/raw/japanese/Git_Workflows/images/GitFeautreFlow.webp)
 source: <https://medium.com/dev-managers-handbook/git-feature-flow-125d28dfef1e>
 
 ---
@@ -345,31 +345,31 @@ flowchart LR
 **Versioned Release の地図:**
 </br>
 
-![Gitlab Flow Versioned release](./images/gitLabFlow1.svg)
+![Gitlab Flow Versioned release](https://github.com/Hujaakbar/Articles/raw/japanese/Git_Workflows/images/gitLabFlow1.svg)
 source: <https://www.gitkraken.com/learn/git/best-practices/git-branch-strategy>
 </br>
 
 **Continuous Release の地図：**
 </br>
 
-![Gitlab Flow](./images/gitlabflow2.png)
+![Gitlab Flow](https://github.com/Hujaakbar/Articles/raw/japanese/Git_Workflows/images/gitlabflow2.png)
 source: <https://github.com/jadsonjs/gitlab-flow>
 </br>
 
-![Gitlab Flow](./images/GitLabFlow3.png)
+![Gitlab Flow](https://github.com/Hujaakbar/Articles/raw/japanese/Git_Workflows/images/GitLabFlow3.png)
 source: <https://github.com/jadsonjs/gitlab-flow>
 </br>
 
-![Gitlab Flow](./images/GitLabFlow4.png)
+![Gitlab Flow](https://github.com/Hujaakbar/Articles/raw/japanese/Git_Workflows/images/GitLabFlow4.png)
 source: <https://github.com/jadsonjs/gitlab-flow>
 </br>
 
-![Gitlab Flow](./images/GitLabFlow5.png)
+![Gitlab Flow](https://github.com/Hujaakbar/Articles/raw/japanese/Git_Workflows/images/GitLabFlow5.png)
 source: <https://github.com/jadsonjs/gitlab-flow>
 </br>
 
 地図 2
-![Gitlab Flow](./images/GitLabFlow6.png)
+![Gitlab Flow](https://github.com/Hujaakbar/Articles/raw/japanese/Git_Workflows/images/GitLabFlow6.png)
 source: <https://github.com/jadsonjs/gitlab-flow>
 
 ---
