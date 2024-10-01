@@ -41,6 +41,43 @@ If you want to learn about how to integrate Git into your development workflow, 
 
 - Use Continuous Integration and Continuos Development tools (CI/CD) such as Github Actions or Gitlab for automatic deployments.
 
+## Creating Graphs
+
+- [Mermaid-js](https://mermaid.js.org/) - JavaScript based diagramming and charting tool that uses markdown-like syntax.
+- [Drawio](https://app.diagrams.net/) - Best of class for creating general diagrams.
+- [Excalidraw](https://excalidraw.com/) - It is virtual whiteboard, best suited for sketching.
+
+## Content Management and Blogging
+
+Many companies publish content
+
+- documentation explaining how to use their product
+- useful tips and hacks about their product
+- news and announcements relating to the company, service etc
+- useful articles to get a traffic to their website and introduce their services/product as a part of sharing useful information.
+
+There are many platforms that offer Content Management/ Blogging services, some of them are free, while others are not and some of them require little bit of coding knowledge while others are no-code platforms etc.
+
+Below two platforms require no coding skills
+
+- [Blogger](https://www.blogger.com/about/?bpli=1) by Google - completely free
+- [Medium](https://medium.com/) - most features are free, some features are behind $5 a month paywall though
+
+I personally prefer Blogger to medium, because of below four reasons:
+
+1. blogger offers several themes to choose from
+1. it is possible to customize layout and theme visually
+1. it allows using CSS to customize a theme
+1. blog content can be written in html
+
+You can learn more about above features and how to use them in this [article](.)
+
+## IT Tools - a Swiss army knife
+
+[It-tools.tech](https://it-tools.tech/) website offers over 80 tools/features ranging from markdown-to-html converter to a QR code generator.
+
+While many of these features can be replicated by experienced programmers with relatively few lines of code, the time and effort involved in writing, maintaining, and hosting these tools can be significant. By providing a ready-to-use platform that houses a diverse range of tools, It-Tools offers a convenient and efficient solution.
+
 ## Learning Resources
 
 - [FreeCodeCamp](https://www.freecodecamp.org/)
@@ -53,7 +90,7 @@ YouTube has many channels that offer tutorial videos. Even Ivy league universiti
 
 On Udemy courses are priced at 240 dollars. But most of the time, there will be 90% discounts, making courses around 15 dollars. So, when you check the Udemy course, if it is listed for 240 dollars, wait a few days and check it again, most likely it will be discounted to 15 dollars.
 
-Many udemy teachers have YouTube channel and when they launch a new course on Udemy, they announce promotional codes that make the Udemy course price 15 dollars. So, you can check out such announcement videos on YouTube.
+Many Udemy teachers have YouTube channel and when they launch a new course on Udemy, they announce promotional codes that make the Udemy course price 15 dollars. So, you can check out such announcement videos on YouTube.
 
 ### Q&A Forums
 
