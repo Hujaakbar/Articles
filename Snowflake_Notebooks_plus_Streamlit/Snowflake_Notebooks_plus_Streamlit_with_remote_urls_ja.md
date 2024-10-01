@@ -1,6 +1,6 @@
 # Notebook の中で Streamlit を使う方法
 
-![notebook_cover_image](./images/notebook_cover.png)
+![notebook_cover_image](https://github.com/Hujaakbar/Articles/raw/japanese/Snowflake_Notebooks_plus_Streamlit/images/notebook_cover.png)
 *Image by [Jan](https://pixabay.com/users/janjf93-3084263/) from [Pixabay](https://pixabay.com//)*
 
 Snowflake で Notebook と Streamlit を使えるのを知っていますか？ Notebook の中で Streamlit を使えるのも知っていますか？もし、知らないなら、この記事を読んでください。
@@ -14,11 +14,11 @@ Notebook
 
 Snowflake もノートブックをサポートしています n ので、Snowflake のノートブックでは`Markdown`, `Python`と`SQL`コードを書けます。
 
-![notebook_example](./images/notebook_example.PNG)
+![notebook_example](https://github.com/Hujaakbar/Articles/raw/japanese/Snowflake_Notebooks_plus_Streamlit/images/notebook_example.PNG)
 
 内部ノートブックは `.ipynb`. Interactive Python Notebook (インタラクティブ Python ノートブック) ファイル形式を使用します。
 
-![Notebook Extension](./images/nb_extension.drawio.png)
+![Notebook Extension](https://github.com/Hujaakbar/Articles/raw/japanese/Snowflake_Notebooks_plus_Streamlit/images/nb_extension.drawio.png)
 
 **Notebook に加えて、Snowflake が Streamlit もサポートしています。**
 
@@ -53,7 +53,7 @@ slider = st.slider(label='My Slider', min_value=0, max_value=10)
 
 結果：
 
-![python code1](./images/python1.PNG)
+![python code1](https://github.com/Hujaakbar/Articles/raw/japanese/Snowflake_Notebooks_plus_Streamlit/images/python1.PNG)
 
 ## Notebook では python セルが他のセルのデータをアクセ出来ます
 
@@ -88,12 +88,12 @@ select *
 from dummy_sales_table;
 ```
 
-![sql code1](./images/sql_code1.PNG)
+![sql code1](https://github.com/Hujaakbar/Articles/raw/japanese/Snowflake_Notebooks_plus_Streamlit/images/sql_code1.PNG)
 
 このクエリーのセル名は`cell7`です。
 このセル名を利用し、python のコードを確認してみましょう。
 
-![python code](./images/python_code2.PNG)
+![python code](https://github.com/Hujaakbar/Articles/raw/japanese/Snowflake_Notebooks_plus_Streamlit/images/python_code2.PNG)
 
 クエリーの結果を直接に使えないです。使う前に、結果をいずれか`Pandas`の`DataFrame`オブジェクトか`Snowpark`の`DataFrame`オブジェクトに変える必要があります。
 
@@ -108,13 +108,13 @@ st.subheader("Sales in 3 key countries")
 st.bar_chart(data=my_df, x='REGION', y='SALES')
 ```
 
-![python code 3](./images/python_code3.PNG)
+![python code 3](https://github.com/Hujaakbar/Articles/raw/japanese/Snowflake_Notebooks_plus_Streamlit/images/python_code3.PNG)
 
 ## Python セルのデータを SQL セルで使う方法
 
 Python セルのデータを SQL セルで使う為に、variable 名を SQL セルで `{{ variable名 }}`として書いてください。
 
-![python code4](./images/python_code4.PNG)
+![python code4](https://github.com/Hujaakbar/Articles/raw/japanese/Snowflake_Notebooks_plus_Streamlit/images/python_code4.PNG)
 
 ### Streamlit セルのデータを SQL セルで使う方法
 
@@ -136,15 +136,15 @@ row_count = st.number_input(
 
 結果：
 
-![python code5](./images/python_code5.PNG)
+![python code5](https://github.com/Hujaakbar/Articles/raw/japanese/Snowflake_Notebooks_plus_Streamlit/images/python_code5.PNG)
 
 もし、セルのコードじゃなくて、セルの結果だけを見たいなら、セルの上の右側にアル 2 番目のボタンを押してください。
 
-![cell](./images/cell.drawio.png)
+![cell](https://github.com/Hujaakbar/Articles/raw/japanese/Snowflake_Notebooks_plus_Streamlit/images/cell.drawio.png)
 
 結果：
 
-![python code6](./images/python_code6.PNG)
+![python code6](https://github.com/Hujaakbar/Articles/raw/japanese/Snowflake_Notebooks_plus_Streamlit/images/python_code6.PNG)
 
 この Streamlit の`table_name`と`row_count`データを SQL クエリーで使いましょう。
 
@@ -156,11 +156,11 @@ limit {{ row_count }};
 
 結果：
 
-![sql code2](./images/sql_code2.PNG)
+![sql code2](https://github.com/Hujaakbar/Articles/raw/japanese/Snowflake_Notebooks_plus_Streamlit/images/sql_code2.PNG)
 
 Streamlit はインテラクティブなので、Streamlit のデータの価値が変わったら、Streamlit のセルから下にアル全てのセルが自動的に再実行されります。
 
-![python_code7](./images/python_code7.PNG)
+![python_code7](https://github.com/Hujaakbar/Articles/raw/japanese/Snowflake_Notebooks_plus_Streamlit/images/python_code7.PNG)
 
 ---
 
