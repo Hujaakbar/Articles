@@ -1,4 +1,7 @@
-# Commonly Used Tools For Software Development
+# Useful Tools For Software Development
+
+![cover photo](./images/commonlyu_used_tools.jpg)
+*Image by [Maria_Domnina](https://pixabay.com/users/maria_domnina-2013500/) from [Pixabay](https://pixabay.com/)*
 
 When starting out in software development it is difficult to figure out which tools to use. This articles outlines some of the most commonly used tools and their use cases. This articles mainly focuses on tools intended for small teams.
 
@@ -28,7 +31,7 @@ When starting out in software development it is difficult to figure out which to
 - Submit changes via pull requests with meaningful commit message and add labels and issue number if there is one. It is always good idea to get the changes reviewed by other team members.
 - Maintain a detailed README document.
 
-If you want to learn about how to integrate Git into your development workflow, check out this article. [Some article]()
+If you want to learn about how to integrate Git into your development workflow, check out this article. [Some article](https://blog.hujaakbar.com/2024/09/git-workflows-ja.html)
 
 ### Deployment
 
@@ -74,7 +77,10 @@ You can learn more about above features and how to use them in this [article](.)
 
 ## IT Tools - a Swiss army knife
 
-[It-tools.tech](https://it-tools.tech/) website offers over 80 tools/features ranging from markdown-to-html converter to a QR code generator.
+![swiss army knife](./images/swiss_knife.png)
+*Image by [Clker-Free-Vector-Images](https://pixabay.com/users/clker-free-vector-images-3736/) from [Pixabay](https://pixabay.com//)*
+
+[It-Tools.tech](https://it-tools.tech/) website offers over 80 tools/features ranging from markdown-to-html converter to a QR code generator.
 
 While many of these features can be replicated by experienced programmers with relatively few lines of code, the time and effort involved in writing, maintaining, and hosting these tools can be significant. By providing a ready-to-use platform that houses a diverse range of tools, It-Tools offers a convenient and efficient solution.
 
@@ -82,11 +88,11 @@ While many of these features can be replicated by experienced programmers with r
 
 - [FreeCodeCamp](https://www.freecodecamp.org/)
 - [Udemy](https://www.udemy.com/)
-- YouTube
+- [YouTube](https://www.youtube.com/@freecodecamp)
 
 **Tip:**
 
-YouTube has many channels that offer tutorial videos. Even Ivy league universities offer their IT courses for free on YouTube. One great example is Computer Science course, CS50, offered by Harvard University.
+YouTube has many channels that offer tutorial videos. Even Ivy league universities offer their IT courses for free on YouTube. One great example is Computer Science course, [CS50](https://www.youtube.com/@cs50), offered by Harvard University.
 
 On Udemy courses are priced at 240 dollars. But most of the time, there will be 90% discounts, making courses around 15 dollars. So, when you check the Udemy course, if it is listed for 240 dollars, wait a few days and check it again, most likely it will be discounted to 15 dollars.
 
@@ -96,7 +102,7 @@ Many Udemy teachers have YouTube channel and when they launch a new course on Ud
 
 - [StackOverflow](https://stackoverflow.com/)
 - [Stack Exchange](https://stackexchange.com/)
-- [Reddit]()
+- [Reddit](https://www.reddit.com/search/?q=r%2Fprogramming)
 
 **Tip:**
 
@@ -105,5 +111,7 @@ On StackOverflow you must ask questions only in English. Besides, your question 
 If you want to ask advice or others' opinion, you can use Reddit or [StackOverflow Discussions](https://stackoverflow.com/beta/discussions).
 
 ---
+
+## Conclusion
 
 Note it is just a short list of commonly used tools. Besides there is no one fits all golden rule. You should further research and try out different tools by yourself. Often times it is just matter of preference. For example some people hate MS Projects software while there are plenty of people who love it.
