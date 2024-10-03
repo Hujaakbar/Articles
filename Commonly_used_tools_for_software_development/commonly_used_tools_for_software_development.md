@@ -1,11 +1,26 @@
 # Useful Tools For Software Development
 
-![cover photo](./images/commonlyu_used_tools.jpg)
+![cover photo](https://github.com/Hujaakbar/Articles/blob/main/Commonly_used_tools_for_software_development/images/commonlyu_used_tools.jpg?raw=true)\
 *Image by [Maria_Domnina](https://pixabay.com/users/maria_domnina-2013500/) from [Pixabay](https://pixabay.com/)*
 
-When starting out in software development it is difficult to figure out which tools to use. This articles outlines some of the most commonly used tools and their use cases. This articles mainly focuses on tools intended for small teams.
+When starting out in software development it is difficult to figure out which tools to use. This article outlines some of the most commonly used tools and their use cases. Note this article mainly focuses on tools intended for small teams.
 
 ## Some of the most commonly used tools
+
+### Version Control
+
+- [GitHub](https://github.com/)
+- [Gitlab](https://about.gitlab.com/) (many people praise Gitlab for its smooth CI/CD implementation)
+
+**Tip:**
+
+- Keep one branch, usually called main or master, as a source of truth meaning it is ready to be deployed at any time.
+- Create branches for changes, bug fixes, or new features instead of directly altering the main branch.
+- Submit changes via pull requests with meaningful commit message and add labels and issue number if there is one. It is always good idea to get the changes reviewed by other team members.
+- Maintain a detailed README document.
+
+If you want to learn about how to integrate Git into your development workflow, check out this article: [Git Workflows](https://blog.hujaakbar.com/2024/09/git-workflows-ja.html)
+
 
 ### Project management
 
@@ -18,20 +33,6 @@ When starting out in software development it is difficult to figure out which to
 - [Slack](https://slack.com/)
 - [Microsoft Teams](https://www.microsoft.com/en-us/microsoft-teams/log-in)
 - [GitHub Discussions](https://docs.github.com/en/discussions/collaborating-with-your-community-using-discussions/about-discussions)
-
-### Version Control
-
-- [Github](https://github.com/)
-- [Gitlab](https://about.gitlab.com/) (many people praise Gitlab for its smooth CI/CD implementation)
-
-**Tip:**
-
-- Keep one branch, usually called main or master, as a source of truth meaning it is ready to be deployed at any time.
-- Create branches for changes, bug fixes, or new features instead of directly altering the main branch.
-- Submit changes via pull requests with meaningful commit message and add labels and issue number if there is one. It is always good idea to get the changes reviewed by other team members.
-- Maintain a detailed README document.
-
-If you want to learn about how to integrate Git into your development workflow, check out this article. [Some article](https://blog.hujaakbar.com/2024/09/git-workflows-ja.html)
 
 ### Deployment
 
@@ -47,12 +48,12 @@ If you want to learn about how to integrate Git into your development workflow, 
 ## Creating Graphs
 
 - [Mermaid-js](https://mermaid.js.org/) - JavaScript based diagramming and charting tool that uses markdown-like syntax.
-- [Drawio](https://app.diagrams.net/) - Best of class for creating general diagrams.
+- [Drawio](https://app.diagrams.net/) - Best of the class for creating general diagrams.
 - [Excalidraw](https://excalidraw.com/) - It is virtual whiteboard, best suited for sketching.
 
 ## Content Management and Blogging
 
-Many companies publish content
+Many companies publish content such as
 
 - documentation explaining how to use their product
 - useful tips and hacks about their product
@@ -66,23 +67,23 @@ Below two platforms require no coding skills
 - [Blogger](https://www.blogger.com/about/?bpli=1) by Google - completely free
 - [Medium](https://medium.com/) - most features are free, some features are behind $5 a month paywall though
 
-I personally prefer Blogger to medium, because of below four reasons:
+I prefer Blogger to Medium, because of below four reasons:
 
 1. blogger offers several themes to choose from
 1. it is possible to customize layout and theme visually
 1. it allows using CSS to customize a theme
 1. blog content can be written in html
 
-You can learn more about above features and how to use them in this [article](.)
+You can learn more about above features and how to use them in this [article](#)
 
 ## IT Tools - a Swiss army knife
 
-![swiss army knife](./images/swiss_knife.png)
+![knife2](https://github.com/Hujaakbar/Articles/blob/main/Commonly_used_tools_for_software_development/images/swiss_knife.png?raw=true)\
 *Image by [Clker-Free-Vector-Images](https://pixabay.com/users/clker-free-vector-images-3736/) from [Pixabay](https://pixabay.com//)*
 
-[It-Tools.tech](https://it-tools.tech/) website offers over 80 tools/features ranging from markdown-to-html converter to a QR code generator.
+[It-Tools.tech](https://it-tools.tech/) website offers over 80 tools/features ranging from markdown-to-html converter to a QR code generator completely free of charge.
 
-While many of these features can be replicated by experienced programmers with relatively few lines of code, the time and effort involved in writing, maintaining, and hosting these tools can be significant. By providing a ready-to-use platform that houses a diverse range of tools, It-Tools offers a convenient and efficient solution.
+While many of these features can be replicated by experienced programmers with *relatively* few lines of code, the time and effort involved in writing, maintaining, and hosting these tools can be significant. By providing a ready-to-use platform that houses a diverse range of tools, It-Tools is a convenient and efficient solution to many day-to-day *minor* headaches.
 
 ## Learning Resources
 
@@ -96,7 +97,7 @@ YouTube has many channels that offer tutorial videos. Even Ivy league universiti
 
 On Udemy courses are priced at 240 dollars. But most of the time, there will be 90% discounts, making courses around 15 dollars. So, when you check the Udemy course, if it is listed for 240 dollars, wait a few days and check it again, most likely it will be discounted to 15 dollars.
 
-Many Udemy teachers have YouTube channel and when they launch a new course on Udemy, they announce promotional codes that make the Udemy course price 15 dollars. So, you can check out such announcement videos on YouTube.
+Many Udemy teachers have YouTube channels. when they launch a new course on Udemy, they announce it on YouTube and almost always provide promotional codes that make the Udemy course's price 15 dollars. So, you should look out for such announcement videos on YouTube.
 
 ### Q&A Forums
 
