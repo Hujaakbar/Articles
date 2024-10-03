@@ -290,3 +290,60 @@ div.status-msg-body {
 .center {
     text-align: center;
 }
+
+/* overwrite blockquote styles */
+body.item-view {
+    & blockquote {
+        font-size: inherit;
+        font-weight: normal;
+        font-style: normal;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans',
+            Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji';
+        line-height: 1.5;
+        padding: 0 1em;
+        margin: 0;
+        margin-bottom: 1rem;
+        border-left: 0.25em solid #c9ced3;
+        color: #525252;
+        /* remove quote (") signs */
+        &::before {
+            content: none;
+        }
+
+        &::after {
+            content: none;
+        }
+    }
+
+    /* make horizontal rule 3 dots */
+    & hr {
+        border: none;
+        border-top: 7px dotted rgb(177, 181, 179);
+        border-radius: 0;
+        height: 1rem;
+        background: transparent;
+        width: 1.8rem;
+        margin: 2.5rem auto 1rem auto;
+    }
+}
+
+/* GitHub Gists, In case I embed some code-snippets in the future */
+
+div.gist {
+    & .mr-2 {
+        margin-right: var(--base-size-8, 8px) !important;
+    }
+
+    & div.gist-file {
+        border: none;
+
+        & .gist-data {
+            border-bottom: none;
+
+            /* hide hosted with love by GitHub banner at the bottom of the Gist embed */
+            & .gist-meta {
+                display: none;
+            }
+        }
+    }
+}
