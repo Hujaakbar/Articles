@@ -17,7 +17,7 @@ img {
 
 /* mermaid graphs */
 pre[class*='language-'],
-pre:has(code) {
+pre {
     border-radius: var(--medium_border_radius);
     box-sizing: border-box;
     /* code snippets */
@@ -37,6 +37,12 @@ pre:has(code.hljs) {
     border: 1px solid #b2b8b890;
 }
 
+summary {
+    border: 1px solid green;
+    border-radius: var(--medium_border_radius);
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+}
 /* images of post snippets  */
 .post-outer .snippet-thumbnail {
     border-radius: var(--medium_border_radius);
@@ -79,6 +85,90 @@ body.item-view {
         background: transparent;
         width: 1.8rem;
         margin: 2.5rem auto 1rem auto;
+    }
+}
+
+summary {
+    /* default */
+    background-color: #ffffff;
+    border: 1px solid rgb(209, 213, 219);
+    border-radius: 0.5rem;
+    box-sizing: border-box;
+    color: #111827;
+    font-family: 'Inter var', ui-sans-serif, system-ui, -apple-system, system-ui,
+        'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif,
+        'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol',
+        'Noto Color Emoji';
+    font-size: 0.875rem;
+    font-weight: 600;
+    line-height: 1.25rem;
+    padding: 0.75rem 1rem;
+    text-align: center;
+    text-decoration: none #d1d5db solid;
+    text-decoration-thickness: auto;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+    cursor: pointer;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+
+    &:hover {
+        background-color: rgb(249, 250, 251);
+    }
+
+    &:focus {
+        outline: 2px solid transparent;
+        outline-offset: 2px;
+    }
+
+    &:focus-visible {
+        box-shadow: none;
+    }
+
+    &.fancy {
+        box-shadow: none;
+        --b: 1px; /* border thickness */
+        --s: 0.5em; /* size of the corner */
+        --color: gray;
+
+        padding: calc(0.5em + var(--s)) calc(0.9em + var(--s));
+        color: var(--color);
+        --_p: var(--s);
+        background: conic-gradient(
+                from 90deg at var(--b) var(--b),
+                #0000 90deg,
+                var(--color) 0
+            )
+            var(--_p) var(--_p) / calc(100% - var(--b) - 2 * var(--_p))
+            calc(100% - var(--b) - 2 * var(--_p));
+        transition: 0.3s linear, color 0s, background-color 0s;
+        outline: var(--b) solid #0000;
+        outline-offset: -2px;
+        font-size: 16px;
+
+        border: 1px solid transparent;
+
+        user-select: none;
+        -webkit-user-select: none;
+        touch-action: manipulation;
+        outline-width: 1px;
+
+        &:hover,
+        &:focus-visible {
+            --_p: 0px;
+            outline-color: rgb(180, 180, 180);
+            outline-offset: -2px;
+            outline-width: 1px;
+            color: rgb(70, 70, 70);
+            background-color: transparent;
+        }
+
+        &:active {
+            background: rgb(245, 245, 245);
+            color: rgb(70, 70, 70);
+            outline-width: 1px;
+            outline-offset: -2px;
+        }
     }
 }
 
