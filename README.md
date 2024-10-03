@@ -28,19 +28,31 @@ This repository contains articles and blogs written on various topics
 
     hightlight.js has 3 advantages:
 
-    - CSS styles only for a specific language can be specified
+    - maintained more actively than PrismJS
     - more themes than PrismJS
     - Auto-detect language feature
 
     ```html
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/default.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/atom-one-light.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
-
-    <!-- and it's easy to individually load additional languages -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/go.min.js"></script>
-
     <script>hljs.highlightAll();</script>
     ```
+
+    The con is even though there are many themes to choose from, there is no really good one.
+    Below are some of my current picks:
+    - base16-windows-high-contrast-light
+    - atom-one-light
+    - stackoverflow-light
+    - intellij-light
+    - xcode
+    - base16-humanoid-light
+    - base16-summerfruit-light
+    - vs
+    - base16-humanoid-dark
+    - atom-one-dark
+    - night-owl
+    - monokai-sublime
+    - felipec
 
 1. If the article contains `mermaid` graphs, to render it properly on html webpage, use below cdn:
 
