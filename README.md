@@ -4,9 +4,12 @@ This repository contains articles and blogs written on various topics
 
 ## Google Blogger Tips :bulb:
 
-1. To convert markdown to html, use [markdown-to-html](https://it-tools.tech/markdown-to-html) converter by IT-Tools.tech. It is better compared to VS Code extension especially when it comes to handing mermaid.js graphs
+1. To convert markdown to html, use [markdown-to-html](https://it-tools.tech/markdown-to-html) converter by IT-Tools.tech. It is better compared to VS Code extension especially when it comes to handling mermaid.js graphs.
+   Besides, it does not add any styles, so the output is a kind of agnostic and clean.
 
-1. To highlight syntax after converting markdown to html, use below three cdns:
+1. To highlight syntax after converting markdown to html, use either [hightlight.js](https://github.com/highlightjs/highlight.js) or [PrimsJS](https://github.com/PrismJS/prism):
+
+    PrismJS:
 
     ```html
     <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/prism.min.js"></script>
@@ -20,6 +23,24 @@ This repository contains articles and blogs written on various topics
     ```
 
     </br>
+
+    **Hightlight.js**
+
+    hightlight.js has 3 advantages:
+
+    - CSS styles only for a specific language can be specified
+    - more themes than PrismJS
+    - Auto-detect language feature
+
+    ```html
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/default.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+
+    <!-- and it's easy to individually load additional languages -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/go.min.js"></script>
+
+    <script>hljs.highlightAll();</script>
+    ```
 
 1. If the article contains `mermaid` graphs, to render it properly on html webpage, use below cdn:
 
