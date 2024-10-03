@@ -37,12 +37,6 @@ pre:has(code.hljs) {
     border: 1px solid #b2b8b890;
 }
 
-summary {
-    border: 1px solid green;
-    border-radius: var(--medium_border_radius);
-    padding: 0.5rem 1rem;
-    cursor: pointer;
-}
 /* images of post snippets  */
 .post-outer .snippet-thumbnail {
     border-radius: var(--medium_border_radius);
@@ -92,7 +86,7 @@ summary {
     /* default */
     background-color: #ffffff;
     border: 1px solid rgb(209, 213, 219);
-    border-radius: 0.5rem;
+    border-radius: var(--medium_border_radius);
     box-sizing: border-box;
     color: #111827;
     font-family: 'Inter var', ui-sans-serif, system-ui, -apple-system, system-ui,
@@ -102,7 +96,7 @@ summary {
     font-size: 0.875rem;
     font-weight: 600;
     line-height: 1.25rem;
-    padding: 0.75rem 1rem;
+    padding: 0.5rem 1rem;
     text-align: center;
     text-decoration: none #d1d5db solid;
     text-decoration-thickness: auto;
