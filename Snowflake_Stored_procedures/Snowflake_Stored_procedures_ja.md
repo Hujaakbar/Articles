@@ -1,6 +1,10 @@
 # Snowflake ストアドプロシージャ
 
-この記事でSnowflakeのストアドプロシージャは何かと使う方法を学びます。
+![sales](./images/sales.jpg)\
+*Image by [Gerd Altmann](https://pixabay.com/users/geralt-9301/) from [Pixabay](https://pixabay.com//)*
+
+
+この記事で Snowflake のストアドプロシージャは何かと使う方法を学びます。
 
 ## ストアドプロシージャと言うのは
 
@@ -32,10 +36,10 @@ $$;
 
 ```
 
-SQLで書いたストアドプロシージャの例：
+SQL で書いたストアドプロシージャの例：
 
 ```SQL
-CREATE OR REPLACE PROCEDURE sp_concatenate_strings( first_arg VARCHAR, second_arg VARCHAR, 
+CREATE OR REPLACE PROCEDURE sp_concatenate_strings( first_arg VARCHAR, second_arg VARCHAR,
 third_arg VARCHAR  DEFAULT ' default_argument ')
   RETURNS VARCHAR
   LANGUAGE SQL
@@ -55,7 +59,7 @@ third_arg VARCHAR  DEFAULT ' default_argument ')
 CALL procedure名(argument);
 ```
 
-Snowflakeが関数もストアドプロシージャもサポートしています。
+Snowflake が関数もストアドプロシージャもサポートしています。
 一つの違いさは関数を`Select`と一緒に使いますが、ストアドプロシージャを`select`と一緒に使えないです。
 だから、ストアドプロシージャを以下のような`DDL`または`DML`データベース操作の実行が必要に時に、使った方がいいです。
 
@@ -79,9 +83,9 @@ CALL sp_concatenate_strings('one_v3', 'two_v3');
 
 ## Security
 
-ハンドラーコードは、制限されたエンジン内で実行されます。ハンドラーコードが大量のメモリを消費すると、エラーが返されます。ハンドラーの完了に時間がかかりすぎると、Snowflakeは SQL ステートメントを強制終了し、ユーザーにエラーを返します。これにより、無限ループなどのエラーの影響およびコストが制限されます。
-ハンドラーは外部ライブラリの機能を使用できますが、Snowflakeのセキュリティ制限により、ファイルへの書き込みなど、一部の機能が無効になります。
-ストアドプロシージャはアトミックではありません。ストアドプロシージャ内の1つのステートメントが失敗した場合、ストアドプロシージャ内の他のステートメントは必ずしもロールバックされるとは限りません。
+ハンドラーコードは、制限されたエンジン内で実行されます。ハンドラーコードが大量のメモリを消費すると、エラーが返されます。ハンドラーの完了に時間がかかりすぎると、Snowflake は SQL ステートメントを強制終了し、ユーザーにエラーを返します。これにより、無限ループなどのエラーの影響およびコストが制限されます。
+ハンドラーは外部ライブラリの機能を使用できますが、Snowflake のセキュリティ制限により、ファイルへの書き込みなど、一部の機能が無効になります。
+ストアドプロシージャはアトミックではありません。ストアドプロシージャ内の 1 つのステートメントが失敗した場合、ストアドプロシージャ内の他のステートメントは必ずしもロールバックされるとは限りません。
 
 ストアドプロシージャは、 SQL ステートメントを動的に作成して実行できます。ただし、これにより、特にパブリックまたは信頼できないソースからの入力を使用して SQL ステートメントを作成する場合、 SQL インジェクション攻撃が可能になります。
 
@@ -90,19 +94,17 @@ CALL sp_concatenate_strings('one_v3', 'two_v3');
 バインドの例：
 
 ```javascript
-let my_variable = 'variable' + '_value'
-let statement = snowflake.createStatement(
-  {
-  sqlText: "INSERT INTO table2 (col1, col2) VALUES (?, ?);",
-  binds:["LiteralValue1", my_variable]
-  }
-);
+let my_variable = 'variable' + '_value';
+let statement = snowflake.createStatement({
+    sqlText: 'INSERT INTO table2 (col1, col2) VALUES (?, ?);',
+    binds: ['LiteralValue1', my_variable],
+});
 ```
 
 ## 練習
 
 ストアドプロシージャを何かと使う方法を学びました、今学んだ事を練習しましょう。
-この練習でJavaScript, PythonとSQLを利用し、同じ事をする三つのストアドプロシージャ作成します。
+この練習で JavaScript, Python と SQL を利用し、同じ事をする三つのストアドプロシージャ作成します。
 
 環境とタスクの説明：
 次の事を想像してください。あなたは日本国内各県に複雑の店がある大きな小売会社で働いています。あなたの会社は良く色々な県で販売キャンペーンをやります。各店の店名と県名、販売キャンペーンが行おっているかないか、販売キャンペーンが行おっているば、割引のデータを保存するテーブルがあります。毎回会社ある県で販売キャンペーンが始めり、それとも、終了した時に、テーブルを更新するのは面倒くさいので、あなたはテーブルを更新するストアドプロシージャを開発したいです。
@@ -113,10 +115,10 @@ let statement = snowflake.createStatement(
 
 ```SQL
 create table if not exists campaigns_table(
-  id INT, 
-  store_name VARCHAR, 
-  prefecture VARCHAR, 
-  campaign BOOLEAN DEFAULT false, 
+  id INT,
+  store_name VARCHAR,
+  prefecture VARCHAR,
+  campaign BOOLEAN DEFAULT false,
   discount INT DEFAULT 0
 );
 ```
@@ -144,9 +146,8 @@ VALUES
 ```
 
 <details>
-
-<summary>
-<i>もっとデータを入力したいなら、クリックしてください。</i>
+<summary class="fancy">
+もっとデータを入力したいなら、クリックしてください。
 </summary>
 
 ```sql
@@ -341,21 +342,27 @@ VALUES
 
 </details>
 
-現在はキャンペーンが行おっていません。
+</br>
 
-### JavaScript
+---
+
+### ストアドプロシージャを三つの言語で作りましょう
+
+条件：現在は会社でキャンペーンが行おっていませんが、北海道でキャンペーンが始める予定です。
+
+#### JavaScript
 
 ```JavaScript
-lety sql_cmd = "select * from table1 where year < 2016";
-lety statement = snowflake.createStatement({sqlText: sql_cmd});
-lety result_set = statement.execute();
+let sql_cmd = "select * from table1 where year < 2016";
+let statement = snowflake.createStatement({sqlText: sql_cmd});
+let result_set = statement.execute();
 ```
 
-- SnowflakeのJavaScriptストアドプロシージャ環境では`snowflake`というオブジェクトは、宣言なしで存在する特別なオブジェクトです。オブジェクトは各ストアドプロシージャのコンテキスト内で提供され、 API を公開して、サーバーと対話できるようにします。つまり、SQLコードを実行するに、この`snowflake`オブジェクトを利用します。
+- Snowflake の JavaScript ストアドプロシージャ環境では`snowflake`というオブジェクトは、宣言なしで存在する特別なオブジェクトです。オブジェクトは各ストアドプロシージャのコンテキスト内で提供され、 API を公開して、サーバーと対話できるようにします。つまり、SQL コードを実行するに、この`snowflake`オブジェクトを利用します。
 
-- JavaScriptを使用するストアドプロシージャの場合、ステートメントの SQL 部分の識別子（引数名など）は自動的に大文字に変換されます。
+- JavaScript を使用するストアドプロシージャの場合、ステートメントの SQL 部分の識別子（引数名など）は自動的に大文字に変換されます。
 
-- Snowflakeストアドプロシージャの API は同期的です。
+- Snowflake ストアドプロシージャの API は同期的です。
 
 じゃあ、`campaigns_table`テーブルを更新するストアドプロシージャを作りましょう。
 
@@ -394,7 +401,7 @@ $$;
 
 このストアドプロシージャを呼ぶ時に県名を大き文字で書いても、小さ文字で書いても, 大文字と小文字を混ぜて書いても、問題なく動くようにしました。
 
-今はHokkaidoでキャンペーン始まりました。
+今は Hokkaido でキャンペーン始まりました。
 上のストアドプロシージャを呼んでください。
 
 ```SQL
@@ -404,19 +411,19 @@ CALL TOGGLE_DISCOUNTS_JS('HOKKAIDO', TRUE, 20);
 上のストアドプロシージャを呼んだ後、テーブルが更新されたか、確認してみてください。
 
 ```SQL
-SELECT * 
+SELECT *
 FROM campaigns_table;
 -- or
-SELECT * 
+SELECT *
 FROM campaigns_table
 WHERE prefecture = 'Hokkaido';
 ```
 
-### Python
+#### Python
 
-JavaScriptストアドプロシージャ環境では`snowflake`オブジェクトがあったように、pythonストアドプロシージャ環境では`session`オブジェクトがあります。SQLコードを実行するに、この`session`オブジェクトを利用します。
+JavaScript ストアドプロシージャ環境では`snowflake`オブジェクトがあったように、python ストアドプロシージャ環境では`session`オブジェクトがあります。SQL コードを実行するに、この`session`オブジェクトを利用します。
 
-JavaScriptストアドプロシージャと同じ結果を達成するストアドプロシージャをpythonでやってみましょう。
+JavaScript ストアドプロシージャと同じ結果を達成するストアドプロシージャを python でやってみましょう。
 
 ```python
 CREATE OR REPLACE PROCEDURE toggle_discounts_py(region STRING, is_discounted STRING, discount NUMBER DEFAULT 0)
@@ -442,7 +449,7 @@ def main(session, region, is_discounted, discount = 0):
 $$;
 ```
 
-今はTokyoでもキャンペーンが始まりました。
+今は Tokyo でもキャンペーンが始まりました。
 上のストアドプロシージャを呼んでください。
 
 ```sql
@@ -452,34 +459,34 @@ CALL TOGGLE_DISCOUNTS_PY('Tokyo', TRUE, 10);
 上のストアドプロシージャを呼んだ後、テーブルが更新されたか、確認してみてください。
 
 ```SQL
-SELECT * 
+SELECT *
 FROM campaigns_table;
 -- or
-SELECT * 
+SELECT *
 FROM campaigns_table
 WHERE prefecture = 'Tokyo';
 ```
 
-#### Pythonのストアドプロシージャの強み
+##### Python のストアドプロシージャの強み
 
-Pythonのストアドプロシージャは特にPandasようなライブラリを使って、データ分析する為に役に立ちます。
+Python のストアドプロシージャは特に Pandas ようなライブラリを使って、データ分析する為に役に立ちます。
 
-以下のクエリーからSnowflakeで使えるPythonのライブラリリストをクエリー出来ます。
+以下のクエリーから Snowflake で使える Python のライブラリリストをクエリー出来ます。
 
 ```SQL
-select * from 
-information_schema.packages 
+select * from
+information_schema.packages
 where language = 'python';
 ```
 
-### Snowflake Scripting (SQL)
+#### Snowflake Scripting (SQL)
 
-上のストアドプロシージャと同じ結果を達成するストアドプロシージャをSQLでやってみましょう。
+上のストアドプロシージャと同じ結果を達成するストアドプロシージャを SQL でやってみましょう。
 
 ```SQL
 CREATE OR REPLACE PROCEDURE toggle_discount_sql(
-    region STRING, 
-    is_discounted STRING, 
+    region STRING,
+    is_discounted STRING,
     discount NUMBER DEFAULT 0)
 RETURNS VARCHAR NOT NULL
 LANGUAGE SQL
@@ -492,19 +499,19 @@ $$
     RAISE invalid_arguments;
   END IF;
   UPDATE campaign_table_aug23_haji  
-  SET CAMPAIGN = :is_discounted, DISCOUNT = :discount 
+  SET CAMPAIGN = :is_discounted, DISCOUNT = :discount
   WHERE PREFECTURE IN (:region, UPPER(:region), LOWER(:region), INITCAP(:region));
   RETURN 'Rows Updated: ' || SQLROWCOUNT;
   END;
 $$;
 ```
 
-今はTokyoでキャンペーンが終わりました。
+今は Tokyo でキャンペーンが終わりました。
 上のストアドプロシージャを呼んでください。
 
 ```SQL
 CALL toggle_discount_sql(
-    REGION => 'ToKyO', 
+    REGION => 'ToKyO',
     is_discounted => FALSE
     );
 ```
@@ -512,16 +519,18 @@ CALL toggle_discount_sql(
 上のストアドプロシージャを呼んだ後、テーブルが更新されたか、確認してみてください。
 
 ```SQL
-SELECT * 
+SELECT *
 FROM campaigns_table;
 -- or
-SELECT * 
+SELECT *
 FROM campaigns_table
 WHERE prefecture = 'Tokyo';
 ```
+
+---
 
 ## 結論
 
 ストアド プロシージャは強力な機能です。ハンドラ/ロジックは、さまざまな言語のいずれかで記述で、言語の選択に正しい選択や間違った選択はありません。どの言語に最も得意なら、その言語を使ってください。
 
-Snowflakeの機能についてもっと学びたいなら以下の記事をご覧ください。
+Snowflake の機能についてもっと学びたいなら以下の記事をご覧ください。
