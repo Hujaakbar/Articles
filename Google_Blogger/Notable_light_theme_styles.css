@@ -16,14 +16,25 @@ img {
 }
 
 /* mermaid graphs */
-pre[class*='language-'] {
+pre[class*='language-'],
+pre:has(code) {
     border-radius: var(--medium_border_radius);
     box-sizing: border-box;
     /* code snippets */
-    &:has(code) {
-        padding: 1.5em;
-        line-height: 1.8;
+    padding: 1.5em;
+    line-height: 1.8;
+
+    & code.hljs {
+        border-radius: inherit;
+        padding: 1.5rem;
     }
+}
+
+pre:has(code.hljs) {
+    /* The same background color as the one used in PrismJS light theme */
+    /* background: #f5f2f0; */
+    padding: 0;
+    border: 1px solid #b2b8b890;
 }
 
 /* images of post snippets  */
@@ -33,6 +44,42 @@ pre[class*='language-'] {
 
 #comments.embed[data-num-comments='0'] {
     padding-top: 2rem;
+}
+
+/* overwrite blockquote styles */
+body.item-view {
+    & blockquote {
+        font-size: inherit;
+        font-weight: normal;
+        font-style: normal;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans',
+            Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji';
+        line-height: 1.5;
+        padding: 0 1em;
+        margin: 0;
+        margin-bottom: 1rem;
+        border-left: 0.25em solid #c9ced3;
+        color: #525252;
+        /* remove quote (") signs */
+        &::before {
+            content: none;
+        }
+
+        &::after {
+            content: none;
+        }
+    }
+
+    /* make horizontal rule 3 dots */
+    & hr {
+        border: none;
+        border-top: 3px dotted rgb(177, 181, 179);
+        border-radius: 0;
+        height: 1rem;
+        background: transparent;
+        width: 1.8rem;
+        margin: 2.5rem auto 1rem auto;
+    }
 }
 
 @media screen and (max-width: 968px) {
@@ -190,7 +237,8 @@ pre[class*='language-'] {
     }
 
     /* let the code to be scrollable when it is longer than its container */
-    pre[class*='language-']:has(code) {
+    pre[class*='language-']:has(code),
+    pre:has(code) {
         white-space: pre; /* Ensure no wrapping inside the pre */
         max-width: 100%; /* Ensure it stays within its container */
         overflow: auto; /* Allow scrolling if the content is too long */
@@ -237,6 +285,10 @@ pre[class*='language-'] {
     }
 
     /* ---------------------------- */
+
+    body.item-view hr {
+        border-top: 5px dotted rgb(177, 181, 179);
+    }
 }
 
 @media screen and (width > 1281px) {
@@ -253,6 +305,10 @@ pre[class*='language-'] {
 
     img {
         border-radius: var(--large_border_radius);
+    }
+
+    body.item-view hr {
+        border-top: 7px dotted rgb(177, 181, 179);
     }
 }
 
@@ -289,42 +345,6 @@ div.status-msg-body {
 
 .center {
     text-align: center;
-}
-
-/* overwrite blockquote styles */
-body.item-view {
-    & blockquote {
-        font-size: inherit;
-        font-weight: normal;
-        font-style: normal;
-        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans',
-            Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji';
-        line-height: 1.5;
-        padding: 0 1em;
-        margin: 0;
-        margin-bottom: 1rem;
-        border-left: 0.25em solid #c9ced3;
-        color: #525252;
-        /* remove quote (") signs */
-        &::before {
-            content: none;
-        }
-
-        &::after {
-            content: none;
-        }
-    }
-
-    /* make horizontal rule 3 dots */
-    & hr {
-        border: none;
-        border-top: 7px dotted rgb(177, 181, 179);
-        border-radius: 0;
-        height: 1rem;
-        background: transparent;
-        width: 1.8rem;
-        margin: 2.5rem auto 1rem auto;
-    }
 }
 
 /* GitHub Gists, In case I embed some code-snippets in the future */
