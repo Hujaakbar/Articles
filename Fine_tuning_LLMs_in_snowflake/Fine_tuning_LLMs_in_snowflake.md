@@ -84,7 +84,7 @@ If you change your mind, and want to abort fine-tuning process you can use `SNOW
 Below is the breakdown of the context window for each base model:
 
 |Model|Context Window|Input Context (prompt)|Output Context (completion)|
-|---|---|---|---|
+|---:|---:|---:|---:|
 |mistral-7b |32k |28k |4k|
 |llama3-8b|8k|6k|2k|
 |mixtral-8x7b |32k |28k |4k|
