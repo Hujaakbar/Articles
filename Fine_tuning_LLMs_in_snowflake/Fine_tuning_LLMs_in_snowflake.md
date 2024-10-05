@@ -1,9 +1,22 @@
-# Fine-tuning LLMs in Snowflake
+# From Generic to Genius: Fine-tuning LLMs for Superior Accuracy in Snowflake
 
 ![Machine Learning](./images/machine_learning.png)
 
 **TL;DR:**
 Cortex Fine-tuning is a fully managed service that lets you fine-tune popular LLMs using your data, all within Snowflake.
+
+While large language models (LLMs) are revolutionizing various fields, their "out-of-the-box" capabilities might not always align perfectly with your specific needs. This is where the power of fine-tuning comes into play. As it will be explained in this article, this feature empowers you to take a base LLM and customize it to excel in your particular domain.
+Here's the brief summary of why you might want to leverage Snowflake's fine-tuning capabilities:
+
+- **Unlocking Domain Expertise**: Pre-trained LLMs are trained on massive, general datasets. Fine-tuning allows you to build upon this foundation and train the LLM further using data specific to your field, such as legal documents, medical records, or financial data. This empowers the LLM to understand complex terminology and patterns unique to your domain, leading to more accurate and relevant results.
+
+- **Better than Prompt Engineering**: While prompt engineering is a powerful technique for guiding LLM responses, it relies on the LLM having access to the necessary information within its pre-trained knowledge. If the LLM lacks the relevant domain-specific knowledge, even the most carefully crafted prompts may not yield accurate or satisfactory results.
+
+- **Cost-Effectiveness**: Developing an LLM from the ground up is a resource-intensive endeavor, demanding significant expertise, time, and computational power. Fine-tuning offers a more practical and cost-effective solution. It allows you to capitalize on the capabilities of existing pre-trained models, customizing them to align with your specific requirements.
+
+This article provides a comprehensive overview of fine-tuning LLMs in Snowflake, from understanding the basics of LLMs and fine-tuning to the practical steps involved in using this powerful feature.
+
+## Fine-tuning LLMs in Snowflake
 
 [A large language model (LLM)](https://en.wikipedia.org/wiki/Large_language_model) is an AI Model that *understands* natural language and generates a text as a response.
 
