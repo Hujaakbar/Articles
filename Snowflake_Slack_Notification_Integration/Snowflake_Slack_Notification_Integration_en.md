@@ -1,11 +1,21 @@
-# Posting messages on Slack from Snowflake
+# Streamline Your Workflow: Send Snowflake Alerts to Slack
 
 ![snowflake](./images/snowflake.jpg)
 
-Using Snowflake's NOTIFICATION INTEGRATION function and Slack's Webhooks feature it is possible to send messages to Slack from Snowflake.
-This method can be used to send messages to Microsoft Teams and PagerDuty as well.
+Do you know integrating Snowflake and Slack can make your life as a data engineer much easier?
+Here's why:
 
-_If you are not familiar with Slack, you can watch this [video][Slack_overview_en] to get a quick overview of Slack._
+- **Real-time error catching and debugging**: Instead of constantly checking logs for errors, you can set up Snowflake to automatically ping you in a Slack channel when something goes wrong. This is like having a dedicated assistant who watches for errors in your code and immediately lets you know so you can fix them faster. This is achieved through the use of webhooks, which are essentially automated HTTP requests that Snowflake sends to Slack when triggered by an event.
+- **Keep everyone in the loop**: Slack integration also means you can keep your entire team informed about the status of data pipelines and other processes. You can configure Snowflake to send notifications to a shared channel whenever a pipeline completes, fails, or encounters an issue. This keeps everyone on the same page and avoids unnecessary status update meetings.
+
+This integration turns Slack into a powerful hub for managing your data workflow, making your life as a data engineer simpler and more productive.
+
+## How to Integrate Snowflake and Slack
+
+Using Snowflake's NOTIFICATION INTEGRATION function and Slack's Webhooks feature it is possible to send messages to Slack from Snowflake.
+*This method can be used to send messages to Microsoft Teams and PagerDuty as well.*
+
+If you are not familiar with Slack, you can watch this [video][Slack_overview_en] to get a quick overview of Slack.
 
 **Webhook** is a http request. It is API call sometimes called reverse API or Push API. The defining feature of webhook is that the client instructs the server to callback (send http request to) the client when some event happens.
 In our case, the client, slack app, instructs the Snowflake to call (make a http request to an url endpoint) when some kind of event happens.
