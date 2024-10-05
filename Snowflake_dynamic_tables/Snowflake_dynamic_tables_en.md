@@ -2,7 +2,7 @@
 
 ![snowflake Dynamic table](./images/dynamic_table.drawio.png)
 
-**TL;DR:** Dynamic tables are tables with in-built syncing capability. On the dynamic table definition you define the source tables, what data to sync and how often to sync.
+**TL;DR:** Dynamic tables are tables with in-built syncing capability. On the dynamic table definition you define the source tables, what data to sync and how often to sync, after that Snowflake takes care of data syncing process automatically.
 
 Dynamic tables are used to transform data in a reliable, and automated way.
 You define the source table, write SQL query to select what data to sync,and set frequency to sync. Snowflake takes care of the rest. When the underlying data on which the dynamic table is based on changes, the table is updated to reflect those changes. These updates are automated and referred to as a "refresh".
