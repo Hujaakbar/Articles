@@ -1,6 +1,17 @@
-# Snowflake から Slack にメッセージを送る
+# ワークフローの合理化：Snowflake アラートを Slack に送信する
 
 ![Snowflake](https://github.com/Hujaakbar/Articles/raw/main/Snowflake_Slack_Notification_Integration/images/snowflake.jpg)
+
+Snowflake と Slack の連携でデータエンジニアの仕事がはかどる！
+Snowflake と Slack を連携させると、データエンジニアの業務効率が大幅に向上します。\
+その理由を見ていきましょう。
+
+- **リアルタイムなエラー検知とデバッグ**: これまでのようにログを常に監視しなくても、Snowflake でエラーが発生した場合に Slack チャンネルに自動通知を送信するように設定できます。これは、コードのエラーを監視し、すぐに知らせてくれる専任のアシスタントがいるようなものです。迅速な問題解決が可能になります。これは、Webhook を使用することで実現します。Webhook とは、イベントをトリガーとして Snowflake から Slack に送信される自動 HTTP リクエストです。
+
+- **チーム全体の情報共有**: Slack 連携により、データパイプラインなどの処理状況をチーム全体に共有することもできます。パイプラインが完了、失敗、または問題が発生した場合に、共有チャンネルに通知を送信するように Snowflake を設定できます。これにより、全員が状況を把握できるようになり、不要な進捗確認会議を減らすことができます。
+この連携により、Slack がデータワークフロー管理の強力なハブとなり、データエンジニアの業務をよりシンプルかつ生産的にします。
+
+## SnowflakeとSlackを統合する方法
 
 Snowflake の NOTIFICATION INTEGRATION と言う機能と Slack の Webhook を利用し Snowflake から Slack にメッセージを送る事が出来ます。
 同じ方法を使って、Snowflake から Microsoft Teams と PagerDuty にもメッセージを送るのは可能です。
@@ -13,7 +24,6 @@ Slack の使う方の概要が必要なら、この[動画][Slack_overview_ja]�
 これは、プロセスをどちらの側から見るかという視点に関するものです。
 Snowflake 側から見ると、これは通常の API 呼び出しであり、Slack への投稿リクエストを行います。
 しかし、Slack 側から見ると、これは Webhook (リバース API 呼び出し) であり、特定のエンドポイントでイベントが発生したときに Snowflake にコールバックするように要求します。
-<br/>
 
 ## ステップ
 
