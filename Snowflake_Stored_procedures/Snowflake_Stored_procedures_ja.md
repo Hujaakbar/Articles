@@ -3,13 +3,12 @@
 ![sales](./images/sales.jpg)\
 *Image by [Gerd Altmann](https://pixabay.com/users/geralt-9301/) from [Pixabay](https://pixabay.com//)*
 
-
 この記事で Snowflake のストアドプロシージャは何かと使う方法を学びます。
 
 ## ストアドプロシージャと言うのは
 
 ストアドプロシージャを関数の一つ種類と考えてもいいです。ストアドプロシージャを記述して、 SQL を実行する手続き型コードでシステムを拡張できます。ストアドプロシージャを作成すると、何度でも再利用できます。
-値を明示的に返すことが許可されていますが、必須ではないです。プロシージャを実行するロールの権限ではなく、プロシージャを所有するロールの権限でコードを実行する。
+値を明示的に返すことが許可されていますが、必須ではないです。プロシージャを実行するロールの権限ではなく、プロシージャを所有するロールの権限でコードを実行します。
 
 サポートされている言語:
 
@@ -26,7 +25,7 @@ CREATE OR REPLACE PROCEDURE プロシージャ名(arguments argumentsのタイ�
 RETURNS レターんタイプ
 LANGUAGE 言語 -- (例:python, JavaScript等)
 -- RUNTIME_VERSION = '3.8' (言語がpython, java, scalaなら必要 )
--- PACKAGES = ('snowflake-snowpark-python')  (言語がpython, java, scalaなら必要 )
+-- PACKAGES = ('snowflake-snowpark-python') (言語がpython, java, scalaなら必要 )
 -- HANDLER = 'run' (言語がpython, java, scalaなら必要 )
 EXECUTE AS -- (CALLERか OWNER)
 AS
@@ -39,14 +38,17 @@ $$;
 SQL で書いたストアドプロシージャの例：
 
 ```SQL
-CREATE OR REPLACE PROCEDURE sp_concatenate_strings( first_arg VARCHAR, second_arg VARCHAR,
-third_arg VARCHAR  DEFAULT ' default_argument ')
+CREATE OR REPLACE PROCEDURE concatenate_strings(
+    first_arg VARCHAR,
+    second_arg VARCHAR,
+    third_arg VARCHAR DEFAULT ' default_argument '
+)
   RETURNS VARCHAR
   LANGUAGE SQL
   AS
   $$
   BEGIN
-    RETURN first_arg || second_arg || third_arg;
+    RETURN first_arg || second_arg || third_arg;
   END;
   $$;
 ```
@@ -67,18 +69,18 @@ Snowflake が関数もストアドプロシージャもサポートしていま�
 - DML ステートメント（例: `UPDATE` ステートメント）
 
 ストアドプロシージャを三つの方法で呼べます。
-上の例で作成した`sp_concatenate_string`ストアドプロシージャを呼んでみましょう。
+上の例で作成した`concatenate_string`ストアドプロシージャを呼んでみましょう。
 
 ```SQL
-CALL sp_concatenate_strings('one_v0', 'two_v0', 'three_v0');
+CALL concatenate_strings('one_v0', 'two_v0', 'three_v0');
 
-CALL sp_concatenate_strings(first_arg => 'one_v1', second_arg => 'two_v1', third_arg => 'three_v1');
+CALL concatenate_strings(first_arg => 'one_v1', second_arg => 'two_v1', third_arg => 'three_v1');
 
 -- 順番が変わったいます。
-CALL sp_concatenate_strings(third_arg => 'three_v2', first_arg => 'one_v2', second_arg => 'two_v2');
+CALL concatenate_strings(third_arg => 'three_v2', first_arg => 'one_v2', second_arg => 'two_v2');
 
 -- 三番目のparameterがデフォルトの価値あるので、二つだけのArgumentを使うのはOkです。
-CALL sp_concatenate_strings('one_v3', 'two_v3');
+CALL concatenate_strings('one_v3', 'two_v3');
 ```
 
 ## Security
@@ -371,7 +373,7 @@ CREATE OR REPLACE PROCEDURE TOGGLE_DISCOUNTS_JS(REGION STRING, ONCAMPAIGN BOOLEA
 RETURNS VARCHAR
 LANGUAGE JAVASCRIPT
 AS
-$$  
+$$
     if((ONCAMPAIGN && DISCOUNT <= 0) || (!ONCAMPAIGN && DISCOUNT != 0))
     {
       throw new Error('Input arguments are wrong');
@@ -380,16 +382,16 @@ $$  
     const campaingColumn = 'CAMPAIGN';
     const discountColumn = 'DISCOUNT';
     const regionLowerCase = REGION.toLowerCase();
-    const regionUpperCase =  regionLowerCase.toUpperCase();
+    const regionUpperCase = regionLowerCase.toUpperCase();
     const regionCapitilized = regionUpperCase.charAt(0) + regionLowerCase.substring(1);
    
     const statement = snowflake.createStatement({
-      sqlText: `UPDATE ${tableName}  SET ${campaingColumn} = :1, ${discountColumn} = :2  
+      sqlText: `UPDATE ${tableName} SET ${campaingColumn} = :1, ${discountColumn} = :2 
                 WHERE prefecture IN (:3, :4, :5, :6);`,
       binds:[ONCAMPAIGN, DISCOUNT, REGION, regionLowerCase, regionUpperCase, regionCapitilized]
       });
     statement.execute();
-    return `${statement.getNumRowsUpdated()} rows have been updated`;
+    return `${statement.getNumRowsUpdated()} 行が更新されました。`;
 $$;
 
 ```
@@ -437,13 +439,13 @@ $$
 def main(session, region, is_discounted, discount = 0):
     if (is_discounted and discount <= 0) or (not is_discounted and discount != 0):
       raise Exception('Input arguments are wrong')
-    table_name = 'campaign_table_aug23_haji'
+    table_name = 'campaigns_table'
     campaing_column = 'CAMPAIGN'
     discount_column = 'DISCOUNT'
     region_lower = region.lower()
-    region_upper =  region_lower.upper()
+    region_upper = region_lower.upper()
     region_capitilized = region_lower.capitalize()
-    sql_command = f"UPDATE {table_name}  SET {campaing_column} = :1, {discount_column} =:2 WHERE prefecture IN (:3, :4, :5, :6);"
+    sql_command = f"UPDATE {table_name} SET {campaing_column} = :1, {discount_column} =:2 WHERE prefecture IN (:3, :4, :5, :6);"
     result = session.sql(sql_command, [is_discounted, discount, region, region_lower, region_upper, region_capitilized]).collect()
     return result[0]
 $$;
@@ -498,7 +500,7 @@ $$
   IF ((is_discounted and discount <= 0) or (not is_discounted and discount != 0) or (discount > 100)) THEN
     RAISE invalid_arguments;
   END IF;
-  UPDATE campaign_table_aug23_haji  
+  UPDATE campaigns_table
   SET CAMPAIGN = :is_discounted, DISCOUNT = :discount
   WHERE PREFECTURE IN (:region, UPPER(:region), LOWER(:region), INITCAP(:region));
   RETURN 'Rows Updated: ' || SQLROWCOUNT;
