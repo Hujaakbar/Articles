@@ -2,7 +2,7 @@
 
 ![snowflake Dynamic table](./images/dynamic_table.drawio.png)
 
-**TL;DR:** Dynamic tablesは、同期機能が組み込まれたテーブルです。Dynamic Table定義では、ソース テーブル、同期するデータ、同期の頻度を定義します。.
+**TL;DR:** Dynamic Tablesは、同期機能が組み込まれたテーブルです。Dynamic Tableの定義では、同期元テーブル、同期するデータ、同期頻度を定義します。その後、Snowflakeがデータ同期プロセスを自動的に処理します。
 
 Dynamic Tableは、信頼性が高く自動化された方法でデータを変換するために使用されます。
 ソース テーブルを定義し、同期するデータを選択するための SQL クエリを記述し、同期の頻度を設定します。残りの作業は Snowflake が行います。Dynamic Tableの基になる基礎データが変更されると、テーブルが更新されてその変更が反映されます。これらの更新は自動化されており、「更新」と呼ばれます。
