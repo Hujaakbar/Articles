@@ -4,23 +4,9 @@ This repository contains articles and blogs written on various topics
 
 ## Google Blogger Tips :bulb:
 
-1. To convert markdown to html, use [markdown-to-html](https://it-tools.tech/markdown-to-html) converter by IT-Tools.tech. It is better compared to VS Code extension especially when it comes to handling mermaid.js graphs.
-   Besides, it does not add any styles, so the output is a kind of agnostic and clean.
+1. To convert markdown to html, use [markdown-to-html](https://codebeautify.org/markdown-to-html) converter by Code Beautify. It is better compared to VS Code extension especially when it comes to handling mermaid.js graphs and adding header ids.
 
 1. To highlight syntax after converting markdown to html, use either [hightlight.js](https://github.com/highlightjs/highlight.js) or [PrimsJS](https://github.com/PrismJS/prism):
-
-    PrismJS:
-
-    ```html
-    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/prism.min.js"></script>
-
-    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/plugins/autoloader/prism-autoloader.min.js"></script>
-
-    <link
-        rel="stylesheet"
-        href="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/themes/prism.min.css"
-    />
-    ```
 
     </br>
 
@@ -53,6 +39,20 @@ This repository contains articles and blogs written on various topics
     - night-owl
     - monokai-sublime
     - felipec
+
+    </br>
+    PrismJS:
+
+    ```html
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/prism.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/plugins/autoloader/prism-autoloader.min.js"></script>
+
+    <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/themes/prism.min.css"
+    />
+    ```
 
 1. If the article contains `mermaid` graphs, to render it properly on html webpage, use below cdn:
 

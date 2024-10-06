@@ -2,7 +2,7 @@
 html {
     --small_border_radius: 5px;
     --medium_border_radius: 7px;
-    --large_border_radius: 15px;
+    --large_border_radius: 12px;
 
     --text_align: center;
 
@@ -382,7 +382,7 @@ body.item-view {
         white-space: pre; /* Ensure no wrapping inside the pre */
         max-width: 100%; /* Ensure it stays within its container */
         overflow: auto; /* Allow scrolling if the content is too long */
-        border-radius: var(--large_border_radius);
+        border-radius: 10px;
     }
 
     img {
