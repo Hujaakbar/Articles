@@ -3,8 +3,11 @@
 ![notebook_cover_image](./images/notebook_cover.png)
 *Image by [Jan](https://pixabay.com/users/janjf93-3084263/) from [Pixabay](https://pixabay.com//)*
 
-Snowflake で Notebook と Streamlit を使えるのを知っていますか？ Notebook の中で Streamlit を使えるのも知っていますか？もし、知らないなら、この記事を読んでください。
-この記事で Snowflake の Notebook の中で Streamlit を使え方法を説明します。
+データ分析において、結果を分かりやすく可視化し、共有することは非常に重要です。従来のBIツールに加えて、近年ではインタラクティブなデータアプリが注目されています。
+
+Snowflake で Notebook と Streamlit を使えるのを知っていますか？ Notebook の中で Streamlit を使えるのも知っていますか？
+SnowflakeノートブックとStreamlitを使えば、Pythonの知識だけで、簡単にインタラクティブなデータアプリを作成できます。Snowflakeノートブックは、コード、Markdownによる説明、そして可視化結果を1つのドキュメントにまとめることができるため、データ分析の作業効率を向上させます。
+この記事では、Snowflakeノートブック上でStreamlitを使ってインタラクティブなデータアプリを作成する方法を紹介します。SQLクエリからデータを取得し、Streamlitのコンポーネントを使って動的なグラフや入力フォームを備えたアプリを構築する手順を、実際のコード例とともに解説します。
 
 ## Notebook と Streamlit は何でしょう？
 
