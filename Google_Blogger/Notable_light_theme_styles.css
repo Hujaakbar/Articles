@@ -41,6 +41,10 @@ pre:has(code.hljs) {
     border: 1px solid #b2b8b890;
 }
 
+pre:has(code) {
+    max-height: 75dvh;
+}
+
 /* images of post snippets  */
 .post-outer .snippet-thumbnail {
     border-radius: var(--medium_border_radius);
@@ -381,7 +385,7 @@ body.item-view {
     pre:has(code) {
         white-space: pre; /* Ensure no wrapping inside the pre */
         max-width: 100%; /* Ensure it stays within its container */
-        max-height: 75dvh;
+
         overflow: auto; /* Allow scrolling if the content is too long */
         border-radius: 10px;
     }
