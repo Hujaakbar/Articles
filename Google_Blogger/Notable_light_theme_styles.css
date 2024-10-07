@@ -381,6 +381,7 @@ body.item-view {
     pre:has(code) {
         white-space: pre; /* Ensure no wrapping inside the pre */
         max-width: 100%; /* Ensure it stays within its container */
+        max-height: 75dvh;
         overflow: auto; /* Allow scrolling if the content is too long */
         border-radius: 10px;
     }
