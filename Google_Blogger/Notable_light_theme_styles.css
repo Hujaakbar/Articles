@@ -28,26 +28,29 @@ pre {
     padding: 1.5em;
     line-height: 1.8;
 
-    & code.hljs {
-        border-radius: inherit;
-        padding: 1.5rem;
+    &:has(code) {
+        max-height: 85dvh;
+    }
+
+    &:has(code.hljs) {
+        /* The same background color as the one used in PrismJS light theme */
+        /* background: #f5f2f0; */
+        padding: 0;
+        border: 1px solid #b2b8b890;
+
+        & code.hljs {
+            border-radius: inherit;
+            padding: 1.5rem;
+        }
     }
 }
 
-pre:has(code.hljs) {
-    /* The same background color as the one used in PrismJS light theme */
-    /* background: #f5f2f0; */
-    padding: 0;
-    border: 1px solid #b2b8b890;
-}
-
-pre:has(code) {
-    max-height: 75dvh;
-}
-
 /* images of post snippets  */
-.post-outer .snippet-thumbnail {
-    border-radius: var(--medium_border_radius);
+/* feed page */
+.post-outer {
+    & .snippet-thumbnail {
+        border-radius: var(--medium_border_radius);
+    }
 }
 
 #comments.embed[data-num-comments='0'] {
@@ -287,8 +290,9 @@ body.item-view {
     body.item-view .Blog .post-title-container {
         border-radius: var(--small_border_radius);
         padding-bottom: 5rem;
-        padding-left: 2rem;
-        padding-right: 2rem;
+        padding-top: 5rem;
+        padding-left: 2.5rem;
+        padding-right: 2.5rem;
     }
 
     /* the subheader that contains published date of the post */
@@ -351,9 +355,12 @@ body.item-view {
         }
     }
 
-    /* -------------------------------------------- */
+    /* -------------------- FEED ------------------------ */
     /*  on the landing page of the blog, heroPost is the feature post */
     div.heroPost {
+        border-radius: var(--large_border_radius);
+        box-shadow: 0 0 17px 0 #cdd4d0;
+
         & div.big-post-title {
             border-top-left-radius: 10px;
             border-bottom-left-radius: 10px;
@@ -388,6 +395,7 @@ body.item-view {
 
         overflow: auto; /* Allow scrolling if the content is too long */
         border-radius: 10px;
+
     }
 
     img {
@@ -411,11 +419,11 @@ body.item-view {
 
     ::-webkit-scrollbar {
         background-color: #f5f5f5;
-        width: 10px;
+        width: 8px;
     }
 
     ::-webkit-scrollbar:horizontal {
-        height: 8px;
+        height: 6px;
     }
 
     ::-webkit-scrollbar-thumb {
@@ -436,6 +444,32 @@ body.item-view {
     }
 }
 
+@media screen and (1400px > width > 1171px) {
+    .sidebar-container {
+        padding-right: 1rem;
+    }
+
+    div.heroPost {
+        & div.big-post-title {
+            padding-left: 5rem;
+            padding-right: 3rem;
+        }
+    }
+
+    div.FeaturedPost + div.Blog.widget {
+        padding-left: 70px;
+        padding-right: 70px;
+    }
+
+    a.snippet-thumbnail + div.post-content.container {
+        margin-right: 36px;
+    }
+
+    .post-outer a.snippet-thumbnail {
+        margin-right: 0;
+    }
+}
+
 @media screen and (width > 1281px) {
     /* top header that contains the blog name, "Cherry Peeked", navigation etc */
     div.centered-top {
@@ -445,7 +479,6 @@ body.item-view {
 
     body.item-view .Blog .post-title-container {
         border-radius: var(--medium_border_radius);
-        padding-bottom: 106px;
     }
 
     img {
