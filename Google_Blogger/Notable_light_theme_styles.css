@@ -7,8 +7,10 @@ html {
     --text_align: center;
 
     --small_grid_body: 1fr minmax(5rem, 2fr) 1fr;
-    --medium_grid_body: 1fr minmax(5rem, 4fr) 1fr;
+    /* this 35rem (700px) value comes from medium */
+    --medium_grid_body: 1fr minmax(5rem, 35rem) 1fr;
     --large_grid_body: 1fr minmax(5rem, 6fr) 1fr;
+    --max_width: 100%;
 }
 
 img {
@@ -230,8 +232,14 @@ body.item-view {
 }
 
 @media screen and (max-width: 968px) {
-    body.item-view .Blog .post-title-container {
-        padding: 62px 24px 54px 24px;
+    body.item-view .Blog {
+        & .post-title-container {
+            padding: 62px 24px 54px 24px;
+        }
+
+        /* & .post-body {
+            font-size: 14px;
+        } */
     }
 
     /* the header element of the filter page (when posts are selected based on labels or published date */
@@ -287,6 +295,10 @@ body.item-view {
 
     /* since starting width 1150px the container uses grid,
     post-title does not spread entire screen widths, hence using border-radius */
+    body.item-view .Blog .post-body {
+        line-height: 32px;
+    }
+
     body.item-view .Blog .post-title-container {
         border-radius: var(--small_border_radius);
         padding-bottom: 5rem;
@@ -301,6 +313,7 @@ body.item-view {
         grid-template-columns: var(--medium_grid_body);
         padding-left: 0;
         padding-right: 0;
+        max-width: var(--max_width);
 
         & .post-header {
             grid-column: 2 / 3;
@@ -321,6 +334,7 @@ body.item-view {
         margin-right: 0;
         padding-right: 0;
         margin-left: 0;
+        max-width: var(--max_width);
 
         & .post-sidebar {
             /* position: static;
@@ -342,6 +356,7 @@ body.item-view {
         display: grid;
         grid-template-columns: var(--medium_grid_body);
         margin: 0;
+        max-width: var(--max_width);
 
         & div.post-share-buttons.post-share-buttons-bottom {
             justify-self: end;
@@ -395,7 +410,6 @@ body.item-view {
 
         overflow: auto; /* Allow scrolling if the content is too long */
         border-radius: 10px;
-
     }
 
     img {
@@ -467,6 +481,12 @@ body.item-view {
 
     .post-outer a.snippet-thumbnail {
         margin-right: 0;
+    }
+
+    .PopularPosts a.snippet-thumbnail {
+        margin-right: 140px;
+        width: 200px;
+        height: 190px;
     }
 }
 
