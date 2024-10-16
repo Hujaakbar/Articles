@@ -23,15 +23,14 @@ SQLFluff can be installed as
 - a [VSCode extension](https://marketplace.visualstudio.com/items?itemName=dorzey.vscode-sqlfluff)
 - pre-commit hook
 - command line tool
-- ci/cd pipeline
+- CI/CD pipeline tool
 
 Easier and less error-prone way of running SQLFluff is as a command line tool.
 We will also discuss using it as a pre-commit hook at a later section.
 
 ### Installing SQLFluff as a command line tool
 
-> To install SQLFluff, you need Python and pip (or any other package manager such as poetry, pipenv).
-> This example uses pip
+**Note:** to install SQLFluff, you need Python and pip (or any other package manager such as poetry, pipenv). This example uses pip
 
 Install SQLFluff by running the following command on the terminal:
 
@@ -134,7 +133,7 @@ In below example we change 7 configuration rules.
 
 `.sqlfluff` file
 
-```sqlfluff
+```shell
 [sqlfluff]
 
 dialect = snowflake
@@ -173,12 +172,12 @@ line_position = leading
 `exclude_rules = ST06` excludes the rule `ST06`. Rule `ST06` orders select targets in ascending complexity. For instance, it puts `*` above other select targets like below:
 
 ```SQL
-    select
-        *,
-        a,
-        b,
-        row_number() over (partition by id order by date) as y
-    from x
+select
+    *,
+    a,
+    b,
+    row_number() over (partition by id order by date) as y
+from my_table;
 ```
 
 However, I don't want to change the order of the columns, so I'm disabling the `ST06` rule.
@@ -190,8 +189,8 @@ Result of `line_position = leading` rule:
 ```SQL
 select
     a
-    , b
-    , c
+    ,b
+    ,c
 from my_table;
 ```
 

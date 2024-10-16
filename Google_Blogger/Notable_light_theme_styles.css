@@ -8,7 +8,7 @@ html {
 
     --small_grid_body: 1fr minmax(5rem, 2fr) 1fr;
     /* this 35rem (700px) value comes from medium */
-    --medium_grid_body: 1fr minmax(5rem, 700px) 1fr;
+    --medium_grid_body: 1fr minmax(5rem, 690px) 1fr;
     --large_grid_body: 1fr minmax(5rem, 6fr) 1fr;
     --max_width: 100%;
 }
@@ -46,6 +46,7 @@ pre {
 
     &:has(code) {
         max-height: 85dvh;
+        font-size: 85%;
     }
 
     &:has(code.hljs) {
@@ -438,7 +439,7 @@ body.item-view {
     pre:has(code) {
         white-space: pre; /* Ensure no wrapping inside the pre */
         max-width: 100%; /* Ensure it stays within its container */
-
+        font-size: 85%;
         overflow: auto; /* Allow scrolling if the content is too long */
         border-radius: 10px;
     }
