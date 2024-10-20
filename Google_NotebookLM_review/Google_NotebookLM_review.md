@@ -1,8 +1,8 @@
 # Google NotebookLM
 
-Considering there is a dozen or more new product released baked in AI or containing the buzzword AI, it is not surprising at all if you haven't heard of [NotebookLM](https://notebooklm.google.com/) by Google yet.
-According to the homepage of NotebookLM it is "an AI-powered research and writing assistant that works best with the sources you upload". As of mid-October 2024 it is free, and experimental.
-I have played with it a few times; it managed to both surprise and disappoint me.
+![podcast](./images/ai-podcast.png)
+
+Considering there is a dozen or more new product released baked in AI or containing the buzzword AI, it is not surprising at all if you haven't heard of [NotebookLM](https://notebooklm.google.com/) by Google yet. According to the homepage of NotebookLM it is "an AI-powered research and writing assistant that works best with the sources you upload". As of mid-October 2024 it is free, and experimental. I have played with it a few times; it managed to both surprise and disappoint me.
 
 ## What is NotebookLM
 
