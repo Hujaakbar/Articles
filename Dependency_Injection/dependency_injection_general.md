@@ -2,14 +2,14 @@
 
 ![injection](./images/injection.jpg)
 
-Dependency Injection often abbreviated as DI is a design pattern/programming technique or simple a term thrown around a lot in software development lingo. When I first encountered this term, I didn't understand what it meant since it seemed to mean something complicated. To my surprise it is just a fancy term representing simple concept. Before going any further let's lay a groundwork and define some terms.
+Dependency Injection often abbreviated as DI is a design pattern/programming technique or simply a term thrown around a lot in software development lingo. When I first encountered this term, I didn't understand what it meant since it seemed to mean something complicated. To my surprise it is just a fancy term representing a simple concept. Before going any further let's lay a groundwork and define some terms.
 
 Service
 : any class that contains some useful functionality.
 
 Dependency
 : a service (any class ) that is used by another class or function.
-Let's say we have a web server with two classes: authentication class and database management class. Users can make a request comes to our web server to add new data or delete some data. In the server side database management class is responsible for connecting to database and modifying the data but it depends on authentication class to check if the user who is making the request is authenticated and has necessary privileges. For database management class, authentication class is a dependency because database management class depends on authentication class to to do its job.
+Let's say we have a web server with two classes: an authentication class and a database management class. Users can make a request to our web server to add new data or delete some data. On the server side, the database management class is responsible for connecting to database and modifying the data but it relies on authentication class to check if the user who is making the request is authenticated and has necessary privileges. For database management class, authentication class is a dependency because database management class depends on authentication class to to do its job.
 
 Client
 : a class that uses service (another class) as its dependency.
@@ -55,9 +55,9 @@ db.add_data(request, user)
 
 ## What is Dependency Injection
 
-Now we have some idea about what dependencies and clients are. It is time to define "Dependency Injection". It is to pass an already created object as an argument to another function/class instead of creating it in the body of that client class/function. If my definition didn't make much sense, here is the alternative definitions by [Wikipedia](https://en.wikipedia.org/wiki/Dependency_injection) "Dependency injection is a programming technique in which an object or function receives other objects or functions that it requires, as opposed to creating them internally".
+Now we have some idea about what dependencies and clients are. It is time to define "Dependency Injection". Dependency Injection is passing an already created object as an argument to another function/class instead of creating it in the body of that client class/function. If my definition didn't make much sense, here is the alternative definitions by [Wikipedia](https://en.wikipedia.org/wiki/Dependency_injection) "Dependency injection is a programming technique in which an object or function receives other objects or functions that it requires, as opposed to creating them internally".
 
-One example is worth dozens of definitions, isn't it?. I hear you. So below is the example we used earlier this time with dependencies being injected.
+One example is worth dozens of definitions, isn't it? I hear you. So below is the example we used earlier this time with dependencies being injected.
 
 ```python
 
@@ -101,7 +101,7 @@ db = Database_Management(auth_class, db_connector_class)
 db.add_data(request, user)
 ```
 
-You might ask what is the purpose of injecting dependencies in this way. After all with the above example it doesn't look that impressive, right. What is the difference between initializing the dependencies inside the client verses passing them as arguments to the client?
+You might ask what is the purpose of injecting dependencies in this way. After all with the above example it doesn't look that impressive, right? What is the difference between initializing the dependencies inside the client versus passing them as arguments to the client?
 
 Above example illustrates mechanics of dependency injection but not its benefits. Now let's talk about its benefits. Primary benefit is to keep various functions of a program loosely coupled. As this [StackOverflow answer](https://stackoverflow.com/a/4618417/22606938) excellently points out "the objects change more frequently then the code that uses them". If not loosely coupled, changes in one part of the program requires modification in multiple places. On the other hand, if loosely coupled, changes in one part of the program requires _ideally_ no modification in other parts of the program. In this regard, by injecting dependencies, i.e, passing already initialized objects as an argument rather than creating them internally, we can keep the creation and usage of the object separate. In this way client function/class doesn't need to know how to create the object or even which object it is using, it only needs to know how to use it. As long as you don't change the methods and fields of the object, your program continues to work without breaking even if you swap the dependencies or change the parameters of those dependencies. Dependency Injection also allows sharing state among client classes.
 
@@ -165,7 +165,7 @@ user = UserProfile(gcp_bucket)
 user.profile_photo(request.user, photo)
 ```
 
-As long as the storage service has the `upload` method that takes data as its argument and returns a link to uploaded data, `UserProfile` class does not care or even know which class it is using whether `S3` class or `Google_Storage` class.This comes handy in testing too. We can easily swap the dependency services with mocks to test the client.
+As long as the storage service has the `upload` method that takes data as its argument and returns a link to uploaded data, `UserProfile` class does not care or even know which class it is using whether `S3` class or `Google_Storage` class. This comes handy in testing too. We can easily swap the dependency services with mocks to test the client.
 
 **Note:** In real life entire logic of the application is not usually defined in single file. Besides, the code is much longer than the above examples.
 
