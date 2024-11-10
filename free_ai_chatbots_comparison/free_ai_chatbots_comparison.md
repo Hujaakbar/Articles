@@ -1,36 +1,38 @@
 # Free AI chatbots comparison
 
-As of November 2024 there are many LLM powered chatbots, such as ChatGPT by OpenAI, Gemini (formerly Bard) by Google, Claude (family of LLMs) by Anthropic  and more. Majority of these chatbots have paid and free tiers. Although there are many review and comparisons of these chatbots, they mainly focus on the premium (paid) version of these chatbots. However, not everyone is willing to shell out $20 per month. I, being broke, have been using free version of chatbots since they came out. Based on my actual use, not the benchmark results, I decided to write a comparison review of free tier of AI chatbots.
+As of November 2024 there are many LLM powered chatbots, such as ChatGPT by OpenAI, Gemini (formerly Bard) by Google, Claude (family of LLMs) by Anthropic  and more. Majority of these chatbots have paid and free tiers. Although there are many review and comparisons of these chatbots, they mainly focus on the premium (paid) versions of these chatbots. However, not everyone is willing to shell out $20 per month. I, being broke, have been using free version of chatbots since they came out. Based on my actual use, not the benchmark results, I decided to write a comparison review of free tier of AI chatbots.
 
-I do also know that rI can't just say "based on my experience XY chatbot is the best, end of story". I need to show some material so that you as a reader can confirm the results. On later section of the post, I will discuss the prompts I used in detail. Little heads-up, I tried to use prompts that have less to do with factual accuracy. I have never seen or heard of an large language model that does not hallucinate. So you cannot always rely on the accuracy of the answers these chatbots generate. If a factually correct answer is needed, the best way to obtain it is by googling it, not via Chatbots. Having said that, AI chatbots are far from useless, they are very useful in idea generation, brainstorming and learning new concepts.
+I know that I can't just say "based on my experience XY chatbot is the best, end of story". I need to show some material so that you as a reader can confirm the results. On later section of the post, I will discuss the prompts I used in detail. Little heads-up, I tried to use prompts that have less to do with factual accuracy. I have never seen or heard of a large language model not hallucinating. The answers these chatbots generate cannot always be relied upon. If a factually correct answer is needed, the best way to obtain it is by googling, not via Chatbots. Having said that, AI chatbots are far from useless, they are very useful in idea generation, brainstorming and learning new concepts.
 
 In this post, I will review free tiers of the following AI chatbots:
 
-- ChatGPT
-- Gemini 1.5 Flash
-- Claude 3 Haiku & Claude 3.5 Sonnet
-- Phind AI 70B & Phind Instant
-- Microsoft Copilot
-- Perplexity AI
-- Meta-Llama-3.1-70B
-- Llama-3.2-11B-Vision
-- Hermes-3-Llama-3.1-8B
-- CohereForAI
-- Qwen2.5-72B
-- Mistral-Nemo-Instruct-2407
-- Microsoft/Phi-3.5-mini
+- [ChatGPT](#chatgpt-4o)
+- [Gemini 1.5 Flash](#gemini-15-flash)
+- [Claude 3 Haiku](#claude-3-haiku) & [Claude 3.5 Sonnet](#claude-35-sonnet)
+- [Phind AI 70B](#phind-ai-70b-10-fee-prompts-per-24-hours) & [Phind Instant](#phind-ai-instant)
+- [Microsoft Copilot](#microsoft-copilot)
+- [Perplexity AI](#perplexity-ai)
+- [Hermes-3-Llama-3.1-8B](#hermes-3-llama-31-8b)
+- [Llama-3.2-11B-Vision](#llama-32-11b-vision-instruct)
+- [Meta-Llama-3.1-70B](#meta-llama-31-70b-instruct)
+- [CohereForAI](#cohereforaic4ai-command-r-plus-08-2024)
+- [Qwen2.5-72B](#qwen25-72b-instruct)
+- [Mistral-Nemo-Instruct-2407](#mistral-nemo-instruct-2407)
+- [Microsoft/Phi-3.5-mini](#microsoftphi-35-mini-instruct)
 
 Before starting I wanna clarify a few points:
 
 1. I am not good at writing prompts. I assume I represent an average user.
-1. To illustrate the difference between chatbots, I asked them to explain two concepts relating to version control systems. If you don't know what version control systems are, that's perfect! It means you can evaluate these chatbot answers more objectively.
-1. The answers AI chatbots given is copy-pasted as text on this post without any modification. I found it is much better than copy-pasting screenshot which is hard to read.
+1. To illustrate the difference between chatbots, I asked them to explain a concept relating to version control systems. If you don't know what version control systems are, that's perfect! It means you can evaluate these chatbot answers more objectively.
+1. The answers AI chatbots given is copy-pasted as text on this post without any modification. I found it much easier to read than copy-pasted screenshots.
 
-To make the reading of this post more bearable and relatable, imagine you are told to make a report on Centralized Version Control Systems and Branching. You have no idea what these terms mean. Not knowing where to start, you turned to AI chatbots for help. Let's see which chatbot can help you the most to understand these concepts.
+To make the reading of this post more bearable and relatable, imagine you are told to make a report on Centralized Version Control Systems. You have no idea what this term means. Not knowing where to start, you turned to AI chatbots for help. Let's see which chatbot can help you the most to understand these concepts.
 
-## Concept 1: Centralized Version Control Systems
+## Review
 
-As a first part of the review, I asked every chatbot the question: "What are centralized version control systems?". Oftentimes some chatbots' answers lacked details. To give a second chance to chatbots, I followed up by "Explain how centralized version control system works. Explain the workflow in detail" prompt.
+**Explain Centralized Version Control Systems:**
+
+I asked every chatbot the following question: "What are centralized version control systems?". Oftentimes some chatbots' answers lacked details. To give a second chance to chatbots, I followed up by "Explain how centralized version control system works. Explain the workflow in detail" prompt.
 
 ### ChatGPT-4o
 
@@ -40,7 +42,7 @@ Definitely the most popular AI chatbot is ChatGPT by OpenAI. Paid version costs 
 
 Link: [https://chatgpt.com/](https://chatgpt.com/)
 
-**Note:** Currently the free version of ChatGPT-4o model is not capable of searching the internet, at least without plugins. On October 31st 2024 OpenAI announced ChatGPT Search, a capabililty that enables ChatGPT access the internet. Although it is said that it will eventually come to free tier too, as of writing this article it is behind the paywall.
+**Note:** Currently the free version of ChatGPT-4o model is not capable of searching the internet, at least without plugins. On October 31st 2024 OpenAI announced ChatGPT Search, a capabililty that enables ChatGPT to access the internet. Although it is said that it would eventually come to free tier too, as of writing this article it is behind the paywall.
 
 **Prompt 1:** What are centralized version control systems?
 
@@ -181,9 +183,9 @@ In a CVCS, the central repository serves as the core of all project data, while 
 
 **My take:**
 
-ChapGPT's answer is for most part very well explained and comprehensive. It explained everything in detailed and gave an useful example. However, it did assume the user had some prior knowledge on version control systems because it didn't give background information, and used the terms "commit", "merge", and "check-out" without explaining their meanings first. Only in later parts of the answer it explained these terms lightly. Besides, even though Centralized Version Control Systems are mainly about version control, collaborative work is equally important feature of them. The introduction only focused on the version control part, collaboration was not emphasized adequately. Further prompting or even prompt engineering is necessary to make ChatGPT give more explanatory, easy to understand answer.
+ChapGPT's answer is for most part well explained and comprehensive. It explained everything in detailed and gave an useful example. However, it did assume the user had some prior knowledge on version control systems because it didn't give background information, and used the terms "commit", "merge", and "check-out" without explaining their meanings first. Only in later parts of the answer it explained these terms lightly. Besides, even though Centralized Version Control Systems are mainly about version control, collaborative work is equally important feature of them. The introduction only focused on the version control part, collaboration was not emphasized adequately. Further prompting or even prompt engineering is necessary to make ChatGPT give more explanatory, easy to understand answer.
 
-**Rating:** 8/10
+**Rating:** 7.5/10
 
 **Extra Info:**
 
@@ -195,7 +197,7 @@ There are tailored versions of the chatbots based on GPT model accessible from C
 
 ![GPTS](./images/gpts.png)
 
-Link: [https://chatgpt.com/gpts]()
+Link: [https://chatgpt.com/gpts](https://chatgpt.com/gpts)
 
 These custom GPTs seem to be the same as the original ChatGPT but with custom instructions either to use simpler terms, use examples or analogies etc.
 
@@ -256,13 +258,13 @@ Do you have familiarity with version control concepts, or would it be helpful to
 </blockquote>
 </details>
 
-Based on the answer one can only assume that this custom GPT is prepending instruction to my prompt: something like "answer in an easy to understand way, using analogies". It is double-edged sort, yes it makes the concept easier to understand but omits some important details.
+Based on the answer one can only assume that this custom GPT is prepending instruction to my prompt, something like "answer in an easy to understand way, using analogies". It is double-edged sort; it makes the concept easier to understand but abstracts away some important details.
 
 ### Gemini 1.5 Flash
 
 ![Gemini](./images/gemini.png)
 
-Gemini, formerly Bard, is Google's answer to OpenAi's ChatGPT. Similar to ChatGPT, Gemini also can generate images. Although not all the time, oftentimes Gemini searches the internet and bases its answers from its findings on the web. However, compared to other chatbots that can access internet, Gemini seems to use fewer webpages as its source to form its answer. Based on my experience of using both Gemini and ChatGPT, Gemini is inferior.
+Gemini, formerly Bard, is Google's answer to OpenAI's ChatGPT. Similar to ChatGPT, Gemini also can generate images. Gemini, some of the time, searches the internet and bases its answers from its findings on the web. However, compared to other chatbots that can access internet, Gemini seems to use fewer webpages as its source. Based on my experience of using both Gemini and ChatGPT, Gemini is inferior.
 
 Link: [https://gemini.google.com/app](https://gemini.google.com/app)
 
@@ -367,7 +369,7 @@ In a CVCS, all project files reside in a single, central repository. Developers 
 </blockquote>
 </details>
 
-**My take:** Gemini assume a lot about user's prior knowledge. It uses the terms "source code", "developers", "check-out" and others without proper explanation. Compared to ChatGPT's answer the answer lacks depths.
+**My take:** Gemini assume a lot about user's prior knowledge. It uses the terms "source code", "developers", "check-out" and others without proper explanation. Compared to ChatGPT's answer, Gemini's answer lacks depths.
 
 **Rating:** 6/10
 
@@ -786,10 +788,9 @@ Would you like me to elaborate on any specific aspect of Centralized Version Con
 </blockquote>
 </details>
 
-**My take:** Even though in its first answer, Haiku tried to give comprehensive answer it failed in multiple ways. It provided too many oftentimes overlapping and confusing points, the points it outlined lacked proper explanation. Among others the section "Comparison with Distributed Version Control" lacked details. The answer to the follow-up prompt is little clearer but it also introduces terms such as "branch" without any explanation.
+**My take:** Even though in its first answer, Haiku tried to give comprehensive answer it failed in multiple ways. It provided many overlapping and confusing points, the points it outlined lacked proper explanation. Among others the section "Comparison with Distributed Version Control" lacked details. The answer to the follow-up prompt is little clearer but it also introduces terms such as "branch" without any explanation.
 
 **Rating:** 5.5/10
-
 
 #### Claude 3.5 Sonnet
 
@@ -963,13 +964,13 @@ Would you like me to elaborate on any particular aspect of this workflow?
 </blockquote>
 </details>
 
-**My take**: Although both ChatGPT and Gemini has a capability to generate images. Claude 3.5 Sonnet was the only AI chatbot that generated Graph. The first answer of the Claude 3.5 Sonnet lacked details and proper explanation. But its answer to the follow-up prompt was much better and it was accompined by a graph explaining the worklow. As it is said, a picture is worth a thousand words. But the answer mainly consisted of bullet points (lists) of short sentences. Overal, the answer is little inferior to the one generated by ChatGPT in certain aspects.
+**My take**: Although both ChatGPT and Gemini has a capability to generate images, Claude 3.5 Sonnet was the only AI chatbot that generated diagram. The first answer of the Claude 3.5 Sonnet lacked details and proper explanation. But its answer to the follow-up prompt was much better and it was accompined by a graph explaining the worklow. As it is said, a picture is worth a thousand words. But the answer mainly consisted of bullet points (lists) of short sentences. Overal, the answer is little inferior to the one generated by ChatGPT in certain aspects.
 
 **Rating:** 7/10
 
 **Extra Info:**
 
-Similar to ChatGPT, you can retry the generation of the answer, i.e. make the claude generate a different answer to your prompt but you can't modify the answer easily like with Gemini. If you want to do so, you should explicitly do so via prompt engineering.
+Similar to ChatGPT, you can retry the generation of the answer, i.e. make the claude generate a different answer to your prompt but you can't modify the answer easily like you can do with Gemini.
 
 ![claude_settings](./images/claude_settings.png)
 
@@ -1152,12 +1153,11 @@ Citations:
 </blockquote>
 </details>
 
+**My take:** In its first answer, phind 70b says "A centralized version control system uses a central server to store all versions of a project's code". So this CVC system uses a central server, but what is it ? It doesn't explain it properly. The answers mainly constist of bullet points. The answer to the second prompt is much better but lacks depth at certain points.
 
-**My take:** In its first answer, phind 70b says "A centralized version control system uses a central server to store all versions of a project's code". So this CVC system uses a central server, but what is it ? It doesn't explain it properly. The answer to the second prompt is much better but lacks depth at certain points.
+**Rating:** 6/10
 
-**Rating:** 5.5-6/10
-
-####  Phind AI Instant
+#### Phind AI Instant
 
 **Prompt 1:** What are centralized version control systems?
 
@@ -1320,7 +1320,7 @@ Citations:
 </blockquote>
 </details>
 
-**My take:** The answer was a little better than the one generated use-limited Phind-70B model. However it lacked some depth and emphasis. For example one of the key points of CVCS is a user/developer can have only a latest copy of the file/files not a full history of the file/files.
+**My take:** Surprisingly the answer is a little better than the one generated by usage-limited Phind-70B model. However it lacks depth and emphasis. For example one of the key points of CVCS is a user/developer can have only a latest copy of the files, not a full history of the files.
 
 **Rating:** 6-6.5/10
 
@@ -1328,7 +1328,7 @@ Citations:
 
 ![copilot](./images/copilot.png)
 
-Microsoft Copilot chatbot is powered by OpenAI's GPT model. But it is not just another interface for ChatGPT. Microsft seems to have implemented some modifications onto how the model generates answers.
+Microsoft Copilot chatbot is powered by OpenAI's GPT model. But it is not just another interface for ChatGPT. Microsft seems to have implemented some modifications onto the model.
 
 
 Link: [https://copilot.microsoft.com/](https://copilot.microsoft.com/)
@@ -1376,7 +1376,7 @@ In essence, centralized version control keeps everything in one place, making it
 </details>
 
 
-**My take:** The explanation to the second prompt was better than the first answer, with good analogy that makes the concept easier to understand. However the answer to the first prompt is short, and lacks details and proper explanation. For example what on earth "single libraries" mean? The second answer, albeit better than the first answer, still lacks depth and details. In this regard it seems to use Microsoft Copilot effectively more prompt engineering skill is required.
+**My take:** The explanation to the second prompt was better than the first answer, with good analogy that makes the concept easier to understand. However the answer to the first prompt is short, and lacks details and proper explanation. For example what on earth "single libraries" mean? The second answer, albeit better than the first answer, still lacks depth and details. It appears that to use Microsoft Copilot effectively more prompt engineering skill is required.
 
 **Rating:** 4/10
 
@@ -1550,15 +1550,15 @@ Citations:
 </blockquote>
 </details>
 
-**My take:** The answer lacks details, mainly consists of sentence bullet points. It introduced terms "commit" and "branch" without proper explanation.
+**My take:** The answer lacks details, mainly consists of single sentence bullet points. It introduced terms "commit" and "branch" without proper explanation.
 
 **Rating:** 6/10
 
 ### HuggingChat Interface
 
-All the ai chatbots covered so far  were based on closed-source AI models. Even though it doesn't make much of a difference to a average user, if knowing whether the AI chatbot is powered by open-source or closed-source LLM, below chatbots are powered by open-source or *to-some-extent* open source LLMs.
+All the AI chatbots covered so far  were based on closed-source AI models. Even though it doesn't make much of a difference to a average user, if knowing whether the AI chatbot is powered by open-source or closed-source LLM, below chatbots are powered by open-source or *to-some-extent* open source LLMs.
 
-HuggingFace provides HuggingChat interface in which you can use several LLMs. As of writing this post, eight models are supported.
+HuggingFace provides HuggingChat interface in which you can use several LLMs. As of writing this post, eight models are supported. Another benefit of using HuggingChat is that it eliminates the need to sign up for each LLM provider separately.
 
 ![huggingchat](./images/huggingchat.png)
 
@@ -1619,7 +1619,7 @@ The main advantage of centralized version control systems is that they provide a
 </details>
 
 
-**My take:** In a few words, not quite there. Answer lacks details and features such as locking.
+**My take:** In a few words, not quite there, usage of words, like "check-out", "commit" without defining them first. Answer lacks details and doesn't mention features such as locking.
 
 **Rating:** 5/10
 
@@ -1823,11 +1823,13 @@ These software systems provide the tools and infrastructure to manage the centra
 </details>
 
 
-**My take:** In its first answer it made a big mistake, "Locking mechanism: When a developer checks out a file or a set of files, they are locked to prevent others from modifying them simultaneously.". The answer says that files are locked automatically when they are chekd out. But as it is clarified in the second asnwer, locking is an optional feature and it is not an automatic.
+**My take:** In its first answer it made a big mistake, "Locking mechanism: When a developer checks out a file or a set of files, they are locked to prevent others from modifying them simultaneously.". The answer says that files are locked automatically when they are chekd out. But as it is clarified in the second asnwer, locking is done manually, it is not an automatic feature.
 
 **Rating:** 2/10
 
 ### CohereForAI/c4ai-command-r-plus-08-2024
+
+CohereForAI LLMs are developed by Cohere inc, a Canadian company founded by former Google employees in 2019.
 
 **Prompt 1:** What are centralized version control systems?
 
@@ -1889,22 +1891,15 @@ Centralized version control systems provide a straightforward way to manage chan
 </blockquote>
 </details>
 
+**My take:** The first answer doesn't explain well. It is brief summery of the CVCSs. However, second answer explains much better what CVCS, committing, checking-out are. It also emphasises collaboration aspect of the version control systems.
 
-**My take:**
-cannot search internet
+Note: CohereForAI cannot access the internet.
 
-
-
-
-
-
-
-
+**Rating:** 7/10
 
 ### Qwen2.5-72B-Instruct
 
 Qwen, a llm, is developed by Alibaba Cloud. It can access internet to form its answers.
-
 
 **Prompt 1:** What are centralized version control systems?
 
@@ -2067,14 +2062,13 @@ By following this workflow, team members can efficiently collaborate on a projec
 </blockquote>
 </details>
 
+**My take:** Qwen2.5 answered well but not clearly. First answer includes "ambigious" terms to a novice user of the version control systems. Besides central server contains not only versions and changes to the files, but files themselves too. The second answer gives detailed workflow and example workflow. That's very nice, but it would be nicer if the answer explained commit and some other terms. Here too the chatbot made a mistake regarding locking feature of the CVCSs. Checking out files don't automatically lock them.
 
-**My take:**
-It can search the internet
-
-
-
+**Rating:** 3.5/10
 
 ### Mistral-Nemo-Instruct-2407
+
+Mistral AI is a French unicorn start-up, founded in 2023 by former Meta and Google DeepMind employees. The large langauge models developed by Mistral AI have attracted huge public attention. However, when I used them, they didn't live up to the hype. On this review test either, the annswer one of its LLMs generated was not accurate. It is worth noting though that it can search the internet.
 
 **Prompt 1:** What are centralized version control systems?
 
@@ -2106,10 +2100,11 @@ Some popular examples of centralized version control systems include Subversion 
 
 <details>
     <summary>
-        2's answer
+        Mistral-Nemo-Instruct-2407's answer
     </summary>
     <br>
 <blockquote>
+
 **How Centralized Version Control Systems Work and Their Workflow:**
 
 Centralized Version Control Systems (CVCS) use a client-server architecture, where a central server hosts the main repository, and clients (developers) connect to it to manage their changes. Here's a detailed workflow of how a CVCS works:
@@ -2155,12 +2150,13 @@ This workflow enables multiple developers to collaborate on a project while main
 </blockquote>
 </details>
 
+**My take:** Mistral-Nemo-Instruct-2407's answer was bad. It mistook CVCSs for DVCSs when talking about "pushhing" the changes to the central repository after making a commit. The graph it generated is very confusing as well.
 
-**My take:**
-can search internet
+**Rating:** 0/10
 
+### Microsoft/Phi-3.5-mini-instruct
 
-### microsoft/Phi-3.5-mini-instruct
+Microsoft, prior to investing in OpenAI, had and still have its AI division that develops language models. One of them developed is Phi, a small language model. It can access the internet, and according to Microsoft, it has low cost and low latency.
 
 **Prompt 1:** What are centralized version control systems?
 
@@ -2222,692 +2218,28 @@ In summary, Centralized Version Control Systems work by having a single central 
 </blockquote>
 </details>
 
-
-**My take:**
-can search internet
-
-
------------
-
-## Question 2: Branch and Branching
-
-Based on the answers to the first question, I chose xxx chatbots as being reasonably good ones. But still it is too much. Having many options is good but jumping from one chatbot to another is not idea. It would be better If I could narrow down my options even further so that I can now which chatbot to use for most of my everyday use. As a second question I chose this prompts: "Explain branch and branching in Version control systems."
-
-### ChatGPT-4o
-
-**prompt 1: Explain branch and branching in Version control systems.
-
-<details>
-    <summary>
-        ChatGPT-4o'answer
-    </summary>
-    <br>
-<blockquote>
-In version control systems (VCS), a **branch** represents an independent line of development, allowing multiple developers or contributors to work on different parts of a project simultaneously without interfering with each other’s changes. **Branching** is the process of creating these branches, and it’s a core concept in version control because it supports parallel development, experimentation, and collaboration.
-
-Let's break down the concepts and look at how they work step-by-step:
-
-### 1. Branch:
-A branch in version control is essentially a pointer to a specific commit in the repository history. It allows you to develop a feature, fix a bug, or experiment independently of the main codebase. When you create a branch, you are creating a separate line of development where changes can be made without affecting the main or other branches.
-
-**Example**:
-If you have a project on a `main` branch (the default branch in many repositories), creating a branch called `feature/login-page` will let you develop a login page on this branch without impacting the main codebase.
-
-### 2. Branching:
-Branching is the action of creating a branch. When you branch off from the main codebase, you create a diverging path from the main development. Developers commonly use branching for tasks like:
-
-   - **Feature Development**: Creating separate branches for each feature (e.g., `feature/search-function`).
-   - **Bug Fixes**: Creating branches to fix bugs (e.g., `fix/header-bug`).
-   - **Experimentation**: Testing new ideas or approaches without risking the stability of the main codebase.
-   - **Release Management**: Keeping branches for each release version (e.g., `release/v1.0`).
-
-### 3. Types of Branches
-There are a few common branch types in most workflows:
-
-   - **Main (or Master) Branch**: The default branch containing the stable production code.
-   - **Feature Branches**: Used for individual features under development. These branches are typically merged into the main branch once the feature is complete.
-   - **Bug Fix Branches**: For isolating and fixing bugs, then merging back to the main branch.
-   - **Release Branches**: Created for each release version and maintained independently for bug fixes related to specific releases.
-   - **Hotfix Branches**: Quick-fix branches for urgent production issues, often created directly from the main branch.
-
-### 4. Workflow with Branching
-In a collaborative environment, branching enables a structured workflow. Here’s a common workflow with branches:
-
-   - **Step 1**: A developer creates a new branch off the main branch for a specific task.
-   - **Step 2**: They make and commit changes to the branch locally.
-   - **Step 3**: Once work is complete, they push this branch to the remote repository.
-   - **Step 4**: A pull request (PR) or merge request (MR) is opened, where the branch’s changes are reviewed.
-   - **Step 5**: After review and any necessary changes, the branch is merged back into the main branch or an appropriate base branch.
-   - **Step 6**: Once merged, the branch can be deleted if no longer needed.
-
-### 5. Key Benefits of Branching
-   - **Isolation**: Each branch provides an isolated environment for development.
-   - **Parallel Development**: Multiple branches allow different developers to work on different features at the same time.
-   - **Reduced Risk**: Changes on a branch do not impact the main branch until they are merged, reducing the risk of introducing errors into the production codebase.
-   - **Code Review and Testing**: Branches enable a workflow where code can be reviewed and tested before merging into the main branch.
-
-### Example in Git
-Here’s how branching might look in a Git workflow:
-
-   ```bash
-   # Create a new branch
-   git checkout -b feature/login-page
-
-   # Make changes and commit
-   git add .
-   git commit -m "Add login page feature"
-
-   # Push branch to remote
-   git push origin feature/login-page
-
-   # Once changes are reviewed, you can merge back to main
-   git checkout main
-   git merge feature/login-page
-   ```
-
-   After merging, you can delete the branch:
-
-   ```bash
-   git branch -d feature/login-page
-   ```
-
-### Conclusion
-Branching and branches are powerful concepts in VCS that allow teams to work on multiple features, fixes, or experiments concurrently. By isolating changes until they’re ready to merge, branches make collaboration, review, and code quality control far more manageable and reduce the risk of destabilizing the main codebase. This is why branching is a fundamental part of modern software development workflows.
-</blockquote>
-</details>
-
-**My Take:**
-
-
-### Gemini 1.5 Flash
-
-**prompt 1: Explain branch and branching in Version control systems.
-
-<details>
-    <summary>
-        Gemini 1.5 Flash's answer
-    </summary>
-    <br>
-<blockquote>
-</blockquote>
-</details>
-
-**My Take:**
-
-
-### Phind AI 70B
-
-**prompt 1: Explain branch and branching in Version control systems.
-
-<details>
-    <summary>
-        Phind AI 70B's answer
-    </summary>
-    <br>
-<blockquote>
-Here's an explanation of branches and branching in version control systems:
-
-### What is a Branch?
-
-A branch in version control is an independent line of development in a repository. It represents a separate stream of work that stems from the main codebase [1]. The main branch is typically called "main", "master", or "trunk".
-
-Key points about branches:
-
-- They allow multiple developers to work on different features simultaneously without interfering with each other [1].
-- Changes made on a branch don't affect other branches until explicitly merged [1].
-- Branches can be short-lived (for individual features) or long-lived (for major releases) [3].
-
-### Why Use Branching?
-
-Branching provides several benefits:
-
-- Enables parallel development by multiple team members [1]
-- Allows isolating experimental or unstable code [1]
-- Facilitates creating different versions/releases of software [1]
-- Makes it easier to collaborate on large projects [1]
-
-### Common Branching Strategies
-
-There are several popular branching strategies:
-
-1. **GitFlow**: Uses multiple long-lived branches (main, develop, release, hotfix) for complex projects [3].
-
-2. **GitHub Flow**: Simpler strategy using short-lived feature branches off main [3].
-
-3. **GitLab Flow**: Combines elements of GitFlow and GitHub Flow, focusing on issue tracking [3].
-
-4. **Trunk-based Development**: Developers work directly on trunk/main branch [2].
-
-5. **Feature Branching**: Create separate branches for individual features [1].
-
-### How Branching Works
-
-The general branching workflow:
-
-1. Create a new branch from the main branch
-2. Make changes on the new branch
-3. Commit those changes
-4. Merge the branch back into main when ready
-
-Key considerations:
-
-- Regularly merge changes from main into feature branches to stay up-to-date [1]
-- Use descriptive names for branches (e.g. "feature/add-login") [3]
-- Keep branches short-lived to avoid divergence [1]
-
-### Merging and Integration
-
-Branches can be merged back into other branches, typically into the main branch. This integrates the changes made on the branch [4]. Some version control systems like Git make merging relatively easy compared to older systems [1].
-
-In summary, branching allows teams to manage parallel development efforts efficiently. Choosing an appropriate branching strategy based on project needs is crucial for effective collaboration and release management.
-
-Citations:
-[1] https://www.atlassian.com/agile/software-development/branching
-[2] https://www.perforce.com/resources/vcs/version-control-branching
-[3] https://medium.com/@dmosyan/version-control-branching-strategies-e68e8d5ef1e0
-[4] https://en.wikipedia.org/wiki/Branching_(version_control)
-[5] https://www.quora.com/What-is-a-branch-in-version-control
-[6] https://www.perforce.com/blog/vcs/branching-definition-what-branch
-[7] https://stackoverflow.com/questions/9392258/difference-between-merging-and-branching
-[8] https://abseil.io/resources/swe-book/html/ch16.html
-[9] https://romanglushach.medium.com/branching-patterns-navigating-the-source-code-maze-strategies-for-streamlined-version-control-b8c9d3d8c5e4
-[10] https://stackoverflow.blog/2021/04/05/a-look-under-the-hood-how-branches-work-in-git/
-</blockquote>
-</details>
-
-**My Take:**
-
-
-### Phind Instant
-
-**prompt 1: Explain branch and branching in Version control systems.
-
-<details>
-    <summary>
-        Phind Instant's answer
-    </summary>
-    <br>
-<blockquote>
-Here's an explanation of branch and branching in version control systems:
-
-### What is branching?
-
-Branching in version control systems allows developers to create separate copies of a codebase at a specific point in time. These copies are called branches. Branches allow multiple developers to work on different features simultaneously without interfering with each other's work [1].
-
-Key points about branching:
-
-- Branches are independent lines of work stemming from one central codebase
-- The main branch may be called "mainline", "default", or "trunk" depending on the version control system
-- Developers can create their own branches from the main code line to work independently
-- Changes to a branch do not affect other developers working on different branches [1]
-
-### Why use branching?
-
-There are several reasons why branching is useful:
-
-- Allows teams to collaborate on different features simultaneously
-- Provides isolation for unstable code during development
-- Enables easier management of major architectural changes
-- Facilitates parallel development of multiple features or bug fixes [1]
-
-### Common branching strategies
-
-Some popular branching strategies include:
-
-1. Feature branching: Used for implementing new features. Each feature gets its own branch.
-
-2. Release branching: Creates a branch for preparing releases. All changes for a release go into this branch.
-
-3. Task branching: Each task or bug fix gets its own short-lived branch.
-
-4. GitFlow: Uses multiple long-lived branches like main, develop, feature, release, and hotfix branches [1][3]
-
-### How branching works
-
-- Developers create a new branch from the main code line
-- They make changes and commits on the new branch
-- When ready, they merge the changes back into the main branch
-- Branches can be merged with other branches as well
-
-### Best practices
-
-- Keep branches short-lived to minimize conflicts
-- Use descriptive names for branches
-- Regularly merge changes from main into feature branches
-- Automate merging and testing with continuous integration [1]
-
-### Challenges
-
-Branching introduces some complexities:
-
-- Potential merge conflicts need to be resolved manually
-- Keeping track of multiple branches can be challenging
-- Long-running branches can accumulate technical debt
-
-Overall, branching provides flexibility and collaboration capabilities that are essential for modern software development teams. Proper branching strategies and workflows help manage complexity and enable efficient parallel development.
-
-Citations:
-[1] https://www.atlassian.com/agile/software-development/branching
-[2] https://www.perforce.com/resources/vcs/version-control-branching
-[3] https://medium.com/@dmosyan/version-control-branching-strategies-e68e8d5ef1e0
-[4] https://en.wikipedia.org/wiki/Branching_(version_control)
-[5] https://www.quora.com/What-is-a-branch-in-version-control
-[6] https://www.perforce.com/blog/vcs/branching-definition-what-branch
-[7] https://stackoverflow.blog/2021/04/05/a-look-under-the-hood-how-branches-work-in-git/
-[8] https://stackoverflow.com/questions/9392258/difference-between-merging-and-branching
-[9] https://abseil.io/resources/swe-book/html/ch16.html
-[10] https://romanglushach.medium.com/branching-patterns-navigating-the-source-code-maze-strategies-for-streamlined-version-control-b8c9d3d8c5e4
-</blockquote>
-</details>
-
-**My Take:**
-
-
-### Perplexity AI
-
-**prompt 1: Explain branch and branching in Version control systems.
-
-<details>
-    <summary>
-        Perplexity AI's answer
-    </summary>
-    <br>
-<blockquote>
-Branching is a fundamental concept in version control systems that allows developers to create separate lines of development from a common codebase. Here's a detailed explanation of branches and branching in version control systems:
-
-## What is a Branch?
-
-A branch is essentially a copy or a snapshot of the codebase at a specific point in time. It represents an independent line of development that diverges from the main codebase[1]. Each branch can be modified separately and in parallel, allowing developers to work on different features or experiments without affecting the main codebase.
-
-## Key Concepts of Branching
-
-### Main Branch
-
-The main branch, often called the trunk, mainline, master, or main, is the primary line of development. It typically contains the stable, production-ready code[1][2].
-
-### Feature Branches
-
-Developers create feature branches to work on specific features or tasks. These branches stem from the main branch and allow isolated development[2].
-
-### Release Branches
-
-Release branches are created to prepare and stabilize code for a specific release version. They allow for bug fixes and final tweaks without disrupting ongoing development on the main branch[2].
-
-### Merging
-
-Merging is the process of integrating changes from one branch back into another, typically the main branch. This allows completed features to be incorporated into the main codebase[1].
-
-## Branching Workflow
-
-1. **Create a Branch**: A developer creates a new branch from the main codebase.
-2. **Make Changes**: The developer works on the new branch, making changes and commits.
-3. **Review and Test**: Changes are reviewed and tested in isolation.
-4. **Merge**: Once the work is complete and approved, the branch is merged back into the main branch.
-
-## Benefits of Branching
-
-1. **Parallel Development**: Multiple developers can work on different features simultaneously without interfering with each other[3].
-2. **Isolation**: Experimental or potentially disruptive changes can be developed in isolation[3].
-3. **Stability**: The main branch remains stable while new features are developed in separate branches.
-4. **Easier Collaboration**: Developers can share and review code changes more effectively.
-
-## Best Practices for Branching
-
-1. **Keep Branches Short-lived**: Long-lived branches can lead to difficult merges and integration problems[4].
-2. **Use Consistent Naming Conventions**: Clear, descriptive branch names help in organization and communication[4].
-3. **Regular Merging**: Frequently merge changes from the main branch into feature branches to reduce conflicts[4].
-4. **Code Reviews**: Use pull requests or merge requests for code review before merging branches[4].
-5. **Clean Up**: Delete branches after they've been merged to keep the repository tidy[4].
-
-## Branching Strategies
-
-Different branching strategies exist to suit various development workflows:
-
-1. **Feature Branching**: Create a branch for each new feature.
-2. **GitFlow**: A more structured approach with specific branches for features, releases, and hotfixes.
-3. **Trunk-Based Development**: Emphasizes working directly on the main branch with very short-lived feature branches.
-
-Branching is a powerful tool in version control systems that enables efficient, parallel development while maintaining code stability. By using branches effectively, development teams can work more collaboratively and manage complex software projects with greater ease and flexibility.
-
-Citations:
-[1] https://en.wikipedia.org/wiki/Branching_(version_control)
-[2] https://www.atlassian.com/agile/software-development/branching
-[3] https://www.perforce.com/blog/vcs/branching-definition-what-branch
-[4] https://www.linkedin.com/advice/0/what-best-practices-branching-merging-version
-[5] https://blog.devart.com/centralized-vs-distributed-version-control.html
-[6] https://www.digitalproductsdp.com/blog/centralized-version-control-systems
-[7] https://www.geeksforgeeks.org/centralized-vs-distributed-version-control-which-one-should-we-choose/
-[8] https://learn.microsoft.com/en-us/azure/devops/repos/tfvc/branching-strategies-with-tfvc?view=azure-devops
-</blockquote>
-</details>
-
-**My Take:**
-
-
-### Claude 3.5 Sonnet
-
-**prompt 1: Explain branch and branching in Version control systems.
-
-<details>
-    <summary>
-        Claude 3.5 Sonnet's answer
-    </summary>
-    <br>
-<blockquote>
-I'll explain branches and branching in version control systems.
-
-
-
-```mermaid
-gitGraph
-    commit id: "Initial"
-    commit id: "Feature 1"
-    branch feature/login
-    checkout feature/login
-    commit id: "Add login UI"
-    commit id: "Add auth"
-    checkout main
-    commit id: "Hotfix"
-    branch feature/payment
-    checkout feature/payment
-    commit id: "Add payment API"
-    checkout main
-    merge feature/login
-    commit id: "Release v1.1"
-    checkout feature/payment
-    commit id: "Payment UI"
-    checkout main
-    merge feature/payment
-    commit id: "Release v1.2"
-
-```
-
-A branch in version control is a parallel version of the code that allows developers to work on different features or fixes independently without affecting the main codebase. Here's a comprehensive explanation:
-
-1. Branch Concepts
-   - A branch is a separate line of development
-   - Each branch maintains its own commit history
-   - Branches can be merged back together
-   - The main branch (often called 'main' or 'master') represents the stable version
-
-2. Common Branch Types
-   - Main/Master Branch: Primary stable codebase
-   - Feature Branches: For new features
-   - Release Branches: For preparing releases
-   - Hotfix Branches: For emergency fixes
-   - Development Branch: Integration branch for features
-
-3. Common Branching Strategies
-
-   a. Feature Branching
-   ```
-   - Create branch from main
-   - Develop feature
-   - Test changes
-   - Merge back to main
-   ```
-
-   b. GitFlow
-   ```
-   - main (stable)
-   - develop (integration)
-   - feature/* (new features)
-   - release/* (release prep)
-   - hotfix/* (emergency fixes)
-   ```
-
-   c. Trunk-Based Development
-   ```
-   - Short-lived feature branches
-   - Frequent merges to main
-   - Emphasis on small changes
-   ```
-
-4. Branch Operations
-   - Create: Make new branch
-   - Checkout: Switch to branch
-   - Merge: Combine branches
-   - Delete: Remove completed branch
-   - Push/Pull: Share branches
-
-5. Best Practices
-   - Keep branches focused and single-purpose
-   - Regularly sync with parent branch
-   - Delete branches after merging
-   - Use clear naming conventions
-   - Review before merging
-
-6. Branch Naming Conventions
-   ```
-   feature/login-system
-   bugfix/password-reset
-   hotfix/security-patch
-   release/v1.2.0
-   ```
-
-7. Branching Workflows
-
-   a. Feature Development
-   ```
-   1. Create feature branch
-   2. Make changes
-   3. Test changes
-   4. Create pull request
-   5. Code review
-   6. Merge to main
-   ```
-
-   b. Hotfix Process
-   ```
-   1. Branch from main
-   2. Fix issue
-   3. Test fix
-   4. Merge to main
-   5. Tag release
-   ```
-
-8. Common Challenges
-   - Merge conflicts
-   - Long-lived branches
-   - Branch organization
-   - Integration issues
-   - Branch dependency
-
-9. Tools and Commands
-   ```bash
-   # Git commands
-   git branch feature-name         # Create branch
-   git checkout branch-name        # Switch branch
-   git merge branch-name          # Merge branch
-   git branch -d branch-name      # Delete branch
-   git push origin branch-name    # Share branch
-   ```
-
-10. Advanced Concepts
-    - Branch Protection Rules
-    - Code Review Requirements
-    - Automated Testing
-    - Continuous Integration
-    - Branch Policies
-
-Would you like me to elaborate on any specific aspect of branching, such as merge strategies or specific workflows?
-</blockquote>
-</details>
-
-**My Take:**
-
-
-### AI Model
-
-**prompt 1: Explain branch and branching in Version control systems.
-
-<details>
-    <summary>
-        answer
-    </summary>
-    <br>
-<blockquote>
-</blockquote>
-</details>
-
-**My Take:**
-
-
-### AI Model
-
-**prompt 1: Explain branch and branching in Version control systems.
-
-<details>
-    <summary>
-        answer
-    </summary>
-    <br>
-<blockquote>
-</blockquote>
-</details>
-
-**My Take:**
-
-
-### AI Model
-
-**prompt 1: Explain branch and branching in Version control systems.
-
-<details>
-    <summary>
-        answer
-    </summary>
-    <br>
-<blockquote>
-</blockquote>
-</details>
-
-**My Take:**
-
-
-### AI Model
-
-**prompt 1: Explain branch and branching in Version control systems.
-
-<details>
-    <summary>
-        answer
-    </summary>
-    <br>
-<blockquote>
-</blockquote>
-</details>
-
-**My Take:**
-
-
-### AI Model
-
-**prompt 1: Explain branch and branching in Version control systems.
-
-<details>
-    <summary>
-        answer
-    </summary>
-    <br>
-<blockquote>
-</blockquote>
-</details>
-
-**My Take:**
-
-
-### AI Model
-
-**prompt 1: Explain branch and branching in Version control systems.
-
-<details>
-    <summary>
-        answer
-    </summary>
-    <br>
-<blockquote>
-</blockquote>
-</details>
-
-**My Take:**
-
-
-### AI Model
-
-**prompt 1: Explain branch and branching in Version control systems.
-
-<details>
-    <summary>
-        answer
-    </summary>
-    <br>
-<blockquote>
-</blockquote>
-</details>
-
-**My Take:**
-
-
-### AI Model
-
-**prompt 1: Explain branch and branching in Version control systems.
-
-<details>
-    <summary>
-        answer
-    </summary>
-    <br>
-<blockquote>
-</blockquote>
-</details>
-
-**My Take:**
-
-
-### AI Model
-
-**prompt 1: Explain branch and branching in Version control systems.
-
-<details>
-    <summary>
-        answer
-    </summary>
-    <br>
-<blockquote>
-</blockquote>
-</details>
-
-**My Take:**
-
-
-### AI Model
-
-**prompt 1: Explain branch and branching in Version control systems.
-
-<details>
-    <summary>
-        answer
-    </summary>
-    <br>
-<blockquote>
-</blockquote>
-</details>
-
-**My Take:**
-
-
-### AI Model
-
-**prompt 1: Explain branch and branching in Version control systems.
-
-<details>
-    <summary>
-        answer
-    </summary>
-    <br>
-<blockquote>
-</blockquote>
-</details>
-
-**My Take:**
+**My take:** The first answer was fairly good. But second answer made a similar mistake, it confused CVCSs with DVCSs by saying commits have to be pushed to central repository. It is a huge mistake.
+
+**Rating:** 1/10.
+
+## My Conclusion
+
+|Chatbots|Can access internet|Rating (out of 10)|
+|:----|:----|:----|
+|ChatGPT|❌|7.5|
+|Gemini 1.5 Flash|✅|6|
+|Claude 3 Haiku|❌|5.5|
+|Claude 3.5 Sonnet|❌|7|
+|Phind AI 70B|✅|6|
+|Phind Instant|✅|6.5|
+|Microsoft Copilot|✅|4|
+|Perplexity AI|✅|6|
+|Hermes-3-Llama-3.1-8B|✅|5|
+|Llama-3.2-11B-Vision|✅|0|
+|Meta-Llama-3.1-70B|❌|2|
+|CohereForAI|❌|7|
+|Qwen2.5-72B|✅|3.5|
+|Mistral-Nemo-Instruct-2407|✅|0|
+|Microsoft/Phi-3.5-mini|✅|1|
+
+There is no perfect AI chatbot that can read your mind or know how to give you a tailored answer that suits your way of thinking and understanding, at least not for free. New Ai start-ups are popping up every week if not every day. Clearly I might have missed some chatbots developed by certain companies. I tried to review chatbots that are free and relatively popular. According to the both review I conducted and my experience for over a year, the most reliable chatbots are ChatGPT, Claude Sonnet 3.5, CohereForAI, and PhindAI.
