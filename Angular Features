@@ -1,0 +1,29 @@
+# Reasons for choosing Angular
+
+1. Angular is more mature and maintained by Google.
+
+1. Built-in [routing]
+
+1. Powerful [cli]
+
+1. Built-in [internalization]
+
+1. Support for dynamic [forms]
+
+1. First-party UI library ([angular-materialUI])
+
+1. Better folder & file structure patterns/esthetics
+
+1. Very helpful (first-party) [browser extension]
+
+1. Built-in Support for Sass
+
+1. http client
+
+
+[browser extension]: https://chromewebstore.google.com/detail/angular-devtools/ienfalfjdbdpebioblfackkekamfmbnh
+[cli]: https://angular.dev/tools/cli
+[routing]: https://angular.dev/guide/routing
+[internalization]: https://angular.dev/guide/i18n
+[forms]: https://angular.dev/guide/forms
+[angular-materialUI]: https://material.angular.io/
