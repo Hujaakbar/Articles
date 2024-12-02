@@ -171,7 +171,7 @@ squash merge feature into main
 
 The result looks like this:
 
-![squash merge result](https://github.com/Hujaakbar/Articles/raw/main/git_squash_merge/images/git_squash_merge_result.PNG)
+![squash merge result](https://github.com/Hujaakbar/Articles/blob/main/git_squash_merge/images/git_squash_merge_result.png?raw=true)
 
 As we can see on the above graph, two branches are not merging.
 
