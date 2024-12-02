@@ -2,7 +2,7 @@
 
 There are many ways to integrate changes in git: *regular*/*normal* git merge, git squash merge, git rebase etc. This article explains git squash merge by comparing it to *regular* merge.
 
-Lets use below example:
+Let's use below example:
 In the repository with default `main` branch, after two commits, a new `feature` branch is created.
 Some work happened in `feature` branch. `feature` branch now has 2 commits that it shares with `main` branch, and three exclusive commits (exists only in `feature` branch).
 In the meantime, others worked on `main` branch and added two new commits  (exists only in `main` branch).
@@ -39,7 +39,6 @@ git switch main
 
 # merge two branches (commits on the top of these two branches)
 git merge feature
-
 ```
 
 If there are conflicting changes, merge conflict will arise.
@@ -68,7 +67,7 @@ git merge feature
 Merge made by the 'ort' strategy.
 ```
 
-We can provide commit message while executing `git merge` command.
+Alternatively, we can provide commit message while executing `git merge` command.
 
 ```bash
 git merge feature -m 'merge feature into main'
@@ -107,9 +106,9 @@ c72d4a9 fourth commit on main
 9b968e8 first commit on main
 ```
 
-Commit history of the main branch changed. Now between `0c2eec3 second commit on main` and `2c3dd61 third commit on main` commits (of the main branch), `21cbaf1 second commit on feature` and `677bc7f first commit on feature` commits (of feature branch) are inserted.
+Commit history of the main branch changed. Now `21cbaf1 second commit on feature` and `677bc7f first commit on feature` commits (of feature branch) are inserted between `0c2eec3 second commit on main` and `2c3dd61 third commit on main` commits (of the main branch).
 
-There is nothing wrong with regular merge. But some people find it confusing or unnecessary to include all the commits from feature branch. Especially multiple branches are merged into main branch on a regular bases. They prefer other ways such as squash merge or rebase.
+There is nothing wrong with regular merge. But some people find it confusing or unnecessary to include all the commits from feature branch, especially when multiple branches are merged into main branch on a regular bases. They prefer other ways of merging changes such as squash merge or rebase.
 
 ## Squash merge
 
@@ -195,4 +194,4 @@ c72d4a9 fourth commit on main
 
 ## Conclusion
 
-Using squash merge is a preference not a right or wrong way of merging. It can make the version history linear and easy to understand but it doesn't mean it is always good. Some commits are useful especially for undoing purposes. So, you don't have to use only squash merge, rather you can choose when to use it based on the content and context.
+Using squash merge is just a preference, not a right or a wrong way of merging. It can make the version history linear and easy to understand but it doesn't mean it is always better. Keeping commit history is useful at times especially for undoing certain changes. So, you don't have to use only one type of merge, rather you can choose when to use squash merge based on the content and context.
