@@ -1,6 +1,6 @@
 # Git Squash Merge
 
-There are many ways to integrate changes in git: *regular* git merge, git squash merge, git rebase etc. This article explains git squash merge by comparing it to *regular* merge.
+There are many ways to integrate changes in git: *regular*/*normal* git merge, git squash merge, git rebase etc. This article explains git squash merge by comparing it to *regular* merge.
 
 Lets use below example:
 In the repository with default `main` branch, after two commits, a new `feature` branch is created.
@@ -171,7 +171,7 @@ squash merge feature into main
 
 The result looks like this:
 
-![squash merge result](https://i.sstatic.net/xF47vBNi.png)
+![squash merge result](https://github.com/Hujaakbar/Articles/raw/main/git_squash_merge/images/git_squash_merge_result.PNG)
 
 As we can see on the above graph, two branches are not merging.
 
