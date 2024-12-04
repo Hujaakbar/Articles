@@ -1,17 +1,17 @@
-# WinMergeのセットアップ
+# WinMerge のセットアップ
 
 WinMerge は、Windows 用のオープン ソースの差分およびマージ ツールです。WinMerge は、フォルダーとファイルの両方を比較し、違いを理解して扱いやすい視覚的なテキスト形式で表示します。
 
 ![WinMerge](https://winmerge.org/screenshots/filecmp.png)
 source: [https://winmerge.org](https://winmerge.org)
 
-## WinMergeをダウンロード
+## WinMerge をダウンロード
 
-[WinMergeのウェブサイト](https://winmerge.org/downloads/?lang=ja)に行って、「WinMerge-2.16.44-x64-Setup.exe」ボタンを押し、WinMerge 2.16をダウンロードしてください。
+[WinMerge のウェブサイト](https://winmerge.org/downloads/?lang=ja)に行って、「WinMerge-2.16.44-x64-Setup.exe」ボタンを押し、WinMerge 2.16 をダウンロードしてください。
 
 ![download_page](https://raw.githubusercontent.com/Hujaakbar/Articles/japanese/winmerge_ja/images/download_page.png)
 
-## WinMergeをインストール
+## WinMerge をインストール
 
 ダウンロードされたソフトウェアをクリックし、ポップアップ画面で「Next」を押してください
 
@@ -23,11 +23,11 @@ source: [https://winmerge.org](https://winmerge.org)
 
 ![install3](https://raw.githubusercontent.com/Hujaakbar/Articles/japanese/winmerge_ja/images/install3.png)
 
-ターミナル等からもWinMergeをアクセス出来ようにする為に「Add WinMerge folder to your system path」オプションを選択し、希望によって他のオプション選択してください
+ターミナル等からも WinMerge をアクセス出来ようにする為に「Add WinMerge folder to your system path」オプションを選択し、希望によって他のオプション選択してください
 
 ![install4](https://raw.githubusercontent.com/Hujaakbar/Articles/japanese/winmerge_ja/images/install4.png)
 
-「Enable Explorer context menu Integration」オプションを選択したら、フォルダ／ファイルを右キリックし、コンテクストメニューからWinMergeを開くようになります。
+「Enable Explorer context menu Integration」オプションを選択したら、フォルダ／ファイルを右キリックし、コンテクストメニューから WinMerge を開くようになります。
 
 ![install5](https://raw.githubusercontent.com/Hujaakbar/Articles/japanese/winmerge_ja/images/install5.png)
 
@@ -39,11 +39,9 @@ source: [https://winmerge.org](https://winmerge.org)
 
 ![install8](https://raw.githubusercontent.com/Hujaakbar/Articles/japanese/winmerge_ja/images/install8.png)
 
-今WinMergeを使えます。でも、もっと効果的に使う為にちょっとカスタマイズしましょう。
-
 ## 言語を日本語にする
 
-もしWinMergeの言語が日本語じゃなくて、英語なら、「Edit」タブから「Options」を押してください。
+もし WinMerge の言語が日本語じゃなくて、英語なら、「Edit」タブから「Options」を押してください。
 
 ![options1](https://raw.githubusercontent.com/Hujaakbar/Articles/japanese/winmerge_ja/images/lang1.png)
 
@@ -51,7 +49,7 @@ source: [https://winmerge.org](https://winmerge.org)
 
 ![lang2](https://raw.githubusercontent.com/Hujaakbar/Articles/japanese/winmerge_ja/images/lang2.png)
 
-## WinMergeを使う方
+## WinMerge を使う方
 
 「ファイル」タッブから「開く」を押し
 
@@ -61,7 +59,7 @@ source: [https://winmerge.org](https://winmerge.org)
 
 ![use2](https://raw.githubusercontent.com/Hujaakbar/Articles/japanese/winmerge_ja/images/use2.png)
 
-**比較したいファイルを指定する方法:**
+**比較したいフォルダを指定する方法:**
 
 ポップアップ画面から対象のフォルダーを選択し、「Open」を押してくだい
 
@@ -75,7 +73,9 @@ source: [https://winmerge.org](https://winmerge.org)
 
 ![use3](https://raw.githubusercontent.com/Hujaakbar/Articles/japanese/winmerge_ja/images/use3.png)
 
-## WinMergeをカスタマイズ
+今 WinMerge を使えます。でも、もっと効果的に使う為にちょっとカスタマイズしましょう。
+
+## WinMerge をカスタマイズ
 
 「表示」タッブから「同一項目の表示」を選択解除してください
 
@@ -89,21 +89,21 @@ source: [https://winmerge.org](https://winmerge.org)
 
 ![customize3](https://raw.githubusercontent.com/Hujaakbar/Articles/japanese/winmerge_ja/images/customize3.png)
 
-ファイル名とフォルダのパスを右側にして、OKを押し
+ファイル名とフォルダのパスを右側にして、OK を押し
 
 ![customize4](https://raw.githubusercontent.com/Hujaakbar/Articles/japanese/winmerge_ja/images/customize4.png)
 
-下に見せられているように11項目を選択し、「OK」を押し
+下に見せられているように 11 項目を選択し、「OK」を押し
 
 ![customize5](https://raw.githubusercontent.com/Hujaakbar/Articles/japanese/winmerge_ja/images/customize5.png)
 
-## CSVのレポートを出す
+## CSV のレポートを出す
 
 比較の後、「ツール」タッブから「レポートの生成」ボタンを押し
 
 ![csv1](https://raw.githubusercontent.com/Hujaakbar/Articles/japanese/winmerge_ja/images/csv1.png)
 
-CSVファイルを保存したい場所を指定し、ファイルの形をCSVにして、「OK」ボタンを押してくだい
+CSV ファイルを保存したい場所を指定し、ファイルの形を CSV にして、「OK」ボタンを押してくだい
 
 ![csv2](https://raw.githubusercontent.com/Hujaakbar/Articles/japanese/winmerge_ja/images/csv2.png)
 
