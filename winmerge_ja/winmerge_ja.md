@@ -77,7 +77,7 @@ source: [https://winmerge.org](https://winmerge.org)
 
 ## WinMergeをカスタマイズ
 
-「表示」タッブから「同一項目の表示」を選択解除してください
+「表示」タッブから「右側のみに存在する項目の表示」を選択し、「同一項目の表示」を選択解除してください
 
 ![customize1](https://raw.githubusercontent.com/Hujaakbar/Articles/japanese/winmerge_ja/images/customize1.png)
 
@@ -107,4 +107,8 @@ CSVファイルを保存したい場所を指定し、ファイルの形をCSV�
 
 ![csv2](https://raw.githubusercontent.com/Hujaakbar/Articles/japanese/winmerge_ja/images/csv2.png)
 
+WinMergeに関しましてもっと情報を以下のページであります。  
+[https://manual.winmerge.org/jp/](https://manual.winmerge.org/jp/)
+
 以上です。この記事読んでくれてありがとうございました。
+
