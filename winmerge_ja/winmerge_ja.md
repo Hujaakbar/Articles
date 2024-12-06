@@ -77,7 +77,7 @@ source: [https://winmerge.org](https://winmerge.org)
 
 ## WinMergeをカスタマイズ
 
-「表示」タッブから「同一項目の表示」を選択解除してください
+「表示」タッブから「右側のみに存在する項目の表示」を選択し、「同一項目の表示」を選択解除してください
 
 ![customize1](https://raw.githubusercontent.com/Hujaakbar/Articles/japanese/winmerge_ja/images/customize1.png)
 
@@ -97,6 +97,52 @@ source: [https://winmerge.org](https://winmerge.org)
 
 ![customize5](https://raw.githubusercontent.com/Hujaakbar/Articles/japanese/winmerge_ja/images/customize5.png)
 
+
+## WinMergeでのワークフローのDemo
+
+**タスク:** プロジェクトのソース コードを 11 月から 12 月まで比較し、何が変更されたかを確認
+
+11月のソースコード:
+
+![11](./images/11.png)
+
+12月のソースコード:
+
+![12](./images/12.png)
+
+実際は違いは 5 つあります（以下のリストをご覧ください）。WinMerge を使用してそれらを見つけてみましょう。
+
+1. 両方でもある「subfolder1」フォルダで12月のバージョンでは以下の５つファイルを削除された:
+    - file1.txt
+    - file2.txt
+    - file5.txt
+    - file7.txt
+
+1. 両方でもあった「extra」フォルダが12月のバージョンでは削除された
+
+1. 12月のバージョンでは新しい「folder_12月」と言うフォルダと中に以下の三つのファイルが作成された:
+    - 12月_file1
+    - 12月_file2
+    - 12月_file3
+
+1. 両方でもある「subfolder2」フォルダに12月のバージョンでは以下の新しいファイルが作成された
+    - react.tsx
+
+1. 両方でもある「subfolder3」フォルダに12月のバージョンでは以下の二つのファイルが更新された
+    - main.py
+    - deselect.html
+
+**比較：**
+
+11 月のフォルダは「左側」、 12 月のフォルダは「右側」です。
+
+![compare1](./images/compare1.png)
+
+ファイルの内容の違いさを見る為にファイル名を押したら、両方のバージョンが開かれて、違う部分の行と分がハイライトされます。
+
+![compare2](./images/compare2.png)
+
+
 ## CSVのレポートを出す
 
 比較の後、「ツール」タッブから「レポートの生成」ボタンを押し
@@ -107,4 +153,8 @@ CSVファイルを保存したい場所を指定し、ファイルの形をCSV�
 
 ![csv2](https://raw.githubusercontent.com/Hujaakbar/Articles/japanese/winmerge_ja/images/csv2.png)
 
+WinMergeに関しましてもっと情報を以下のページであります。  
+[https://manual.winmerge.org/jp/](https://manual.winmerge.org/jp/)
+
 以上です。この記事読んでくれてありがとうございました。
+
