@@ -97,8 +97,7 @@ source: [https://winmerge.org](https://winmerge.org)
 
 ![customize5](https://raw.githubusercontent.com/Hujaakbar/Articles/japanese/winmerge_ja/images/customize5.png)
 
-
-## WinMergeでのワークフローのDemo
+## 比較の例
 
 **タスク:** プロジェクトのソース コードを 11 月から 12 月まで比較し、何が変更されたかを確認
 
