@@ -41,7 +41,8 @@ pre {
     border-radius: var(--medium_border_radius);
     box-sizing: border-box;
     /* code snippets */
-    padding: 1.5em;
+    padding: 1.2em;
+    padding-left: 0.75em;
     line-height: 1.8;
 
     &:has(code) {
@@ -57,7 +58,8 @@ pre {
 
         & code.hljs {
             border-radius: inherit;
-            padding: 1.5rem;
+            padding: 1.2rem;
+            padding-left: 0.75rem;
         }
     }
 }
@@ -114,8 +116,54 @@ div.post-body-container {
         }
     }
 
+    & dl {
+        & dt {
+            font-style: italic;
+            font-weight: 700;
+            margin-top: 1rem;
+            margin-bottom: 0.1rem;
+        }
+
+        & dd {
+            margin-inline-start: 40px;
+        }
+    }
+
+    & details {
+        margin: 0.75rem auto;
+        transition: background 0.4s ease;
+
+        &[open] {
+            background: #ddf5ef;
+            padding: 2px inherit 1px 1rem;
+            padding-left: 1rem;
+            padding-right: 1rem;
+            padding-bottom: 0.75rem;
+            border-radius: var(--medium_border_radius);
+            border-bottom: 1px solid #38ebc4f0;
+            margin-bottom: 1.5rem;
+            /* border-top: 1px solid  #5252526b; */
+
+            & summary {
+                background-color: #25a186;
+                color: white;
+                padding: 0.62rem 1rem;
+                font-size: 0.9rem;
+                margin-left: -1rem;
+                margin-right: -1rem;
+                border-bottom-left-radius: 0;
+                border-bottom-right-radius: 0;
+            }
+        }
+    }
+
     & summary {
         /* default */
+        & ::marker {
+            color: rgb(21, 91, 21);
+        }
+
+        display: list-item;
         background-color: #ffffff;
         border: 1px solid rgb(209, 213, 219);
         border-radius: var(--medium_border_radius);
@@ -316,7 +364,7 @@ body.item-view {
             grid-column: 1 / 2;
             grid-row: 1;
             justify-self: center;
-           /* z-index: 0;*/
+            /* z-index: 0;*/
         }
 
         & pre:has(> code.mermaid),
@@ -441,7 +489,7 @@ body.item-view {
         max-width: 100%; /* Ensure it stays within its container */
         font-size: 85%;
         overflow: auto; /* Allow scrolling if the content is too long */
-        border-radius: 10px;
+        /* border-radius: 10px; */
     }
 
     img {
