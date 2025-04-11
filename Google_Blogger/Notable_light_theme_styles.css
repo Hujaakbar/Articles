@@ -131,7 +131,7 @@ div.post-body-container {
 
     & details {
         margin: 0.75rem auto;
-        transition: background 0.4s ease;
+        transition: background 0.2s ease;
 
         &[open] {
             background: #ddf5ef;
@@ -147,8 +147,8 @@ div.post-body-container {
             & summary {
                 background-color: #25a186;
                 color: white;
-                padding: 0.62rem 1rem;
-                font-size: 0.9rem;
+                padding: 0.635rem 1rem;
+                font-size: 1rem;
                 margin-left: -1rem;
                 margin-right: -1rem;
                 border-bottom-left-radius: 0;
@@ -159,9 +159,9 @@ div.post-body-container {
 
     & summary {
         /* default */
-        & ::marker {
+        /* &::marker {
             color: rgb(21, 91, 21);
-        }
+        } */
 
         display: list-item;
         background-color: #ffffff;
@@ -173,10 +173,10 @@ div.post-body-container {
             system-ui, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
             sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol',
             'Noto Color Emoji';
-        font-size: 0.875rem;
+        font-size: 0.95rem;
         font-weight: 600;
         line-height: 1.25rem;
-        padding: 0.5rem 1rem;
+        padding: 0.6rem 1rem;
         text-align: center;
         text-decoration: none #d1d5db solid;
         text-decoration-thickness: auto;

@@ -1085,6 +1085,20 @@ A password with 42 bits of entropy would require $2^{42}$ (over 4 trillion) atte
 >
 > _Source: [Wikipedia](https://en.wikipedia.org/wiki/Password_strength#Entropy_as_a_measure_of_password_strength)_
 
+Examples:
+
+|Password|Length| Entropy|
+|:---|:---|:---|
+|my-strong-password|18|105.443|
+|myStrongPassword_1_ptkyzw|25|146.425|
+|eb7NyrFWtKUmU4D5auWrsUv4TTbsqAxU|32|187.424 |
+
+**Ideal vs Practical:**
+
+The Wikipedia formula calculates a *best-case scenario* assuming for **a truly random password** consisting of random characters. However, oftentimes passwords do not consist of truly random characters. As a result by using dictionary attack (rather than brute-force attack), passwords can be cracked much more easily.
+
+KeePassXC calculates passwords' entropy while also considering dictionary attack vector.
+
 ```txt
 $ keepassxc-cli estimate my-strong-password
 Length 18       Entropy 31.975  Log10 9.625
@@ -1110,6 +1124,8 @@ Length 32       Entropy 195.086 Log10 58.727
 ```
 
 **Advanced analysis:**
+
+Breakdown of the password based on attack vectors.
 
 ```txt
 $ keepassxc-cli estimate -a myStrongPassword_1_ptkyzw
