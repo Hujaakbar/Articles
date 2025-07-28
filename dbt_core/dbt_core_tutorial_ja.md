@@ -259,13 +259,14 @@ version: 2
 
 sources:
   - name: sales_prod # ソース名
-    - database: PROD_SALES_DB
-      schema: RAW_SALES
-      tables:
-        - name: accounts
-        - name: opportunities
+    database: PROD_SALES_DB
+    schema: RAW_SALES
+    tables:
+      - name: accounts
+      - name: opportunities
 
-    - database: Sales_contracts
+    - name: sales_contracts # ソース名
+      database: Sales_contracts
       schema: contracts
       tables:
         - name: orders
@@ -564,7 +565,7 @@ models:
       - name: status
         data_tests:
           - accepted_values:
-            values: ['held', 'pending', 'waiting for approval']
+              values: ['held', 'pending', 'waiting for approval']
       - name: venue
         data_tests:
           - not_null
@@ -837,7 +838,7 @@ packages:
 
 ### dbt 再実行
 
-モデルを削除しないと、dbt は実行ごとにモデルをマテリアライズし続けます。これがまさに必要な動作になる場合もあります。ベーステーブルのデータが大幅に変更された場合、変更を反映するためにモデルを再度マテリアライズする必要があります。
+dbt は実行ごとにモデルをマテリアライズし続けます。これがまさに必要な動作になる場合もあります。
 
 既にマテリアライズされているモデル/テーブル「customers」があるとします。
 ベーステーブルの内容が変更されたので、モデル/テーブルの最新の変更を確認したいとします。
@@ -1111,7 +1112,7 @@ dbt はターゲットオブジェクトを作成し、以下のフィールド�
         ...
     ```
 
-    ターゲットに応じて、使用するデータベースを動的に選択できます。データベースが同じスキーマとテーブル名を持つ場合、非常に便利です。
+    ターゲットに応じて、使用するデータベースを動的に選択できます。
 
 ### Config
 
@@ -1279,10 +1280,6 @@ dbtプロジェクトを三つの場所をで構成できます。
     ...
     from raw_inventory
     ```
-
-### モデルの削除
-
-dbt は実行済み/実行中のモデルを自動的に削除またはアーカイブしません。ビュー/テーブルを何度も作成することを避けるため、モデルを削除するか、手動でアーカイブする必要があります。`dbt_project.yml` ファイルやその他のプロパティ yaml ファイルでモデルを指定している場合は、そこからも参照を削除する必要があります。
 
 ### 解析とコンパイル
 
