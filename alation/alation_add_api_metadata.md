@@ -4,18 +4,20 @@
 
 When your datasets, reports, and other assets are spread across environments (AWS, Azure, GitHub, Power Bi etc), it can take days to hunt down the right information (to find out where is what data). Metadata management is the cornerstone of modern data strategy. Like a skilled librarian, it ensures the right data is cataloged, easy to locate, properly maintained, and aligned with organizational needs. One of the Metadata management solutions is Alation.
 
-[Short explanation 1](https://youtu.be/G3OT-GNxK0w?feature=shared)
-[Short explanation 2](https://youtu.be/sEgPNk-vSyc?feature=shared)
+Video explanations:
+
+- [Short explanation 1](https://youtu.be/G3OT-GNxK0w?feature=shared)
+- [Short explanation 2](https://youtu.be/sEgPNk-vSyc?feature=shared)
 
 ## Connectors
 
-Alation provides connectors for over 120 sources.
-[all connectors](https://www.alation.com/product/connectors/all-connectors/)
+Alation provides connectors for over 120 sources:[all connectors](https://www.alation.com/product/connectors/all-connectors/).
 
 Alation can extract most of the metadata automatically but not all.
 Let's take the example of Denodo & Alation case. Alation has a connector for Denodo.
-[Denode connector](https://www.alation.com/docs/en/latest/OpenConnectorFramework/DataSourceConnectors/Denodo/DenodoOCFConnectorOverview.html)
-[Connection explanation by Denodo](https://community.denodo.com/kb/en/view/document/How%20to%20integrate%20Alation%20with%20Denodo)
+
+- [Denode connector](https://www.alation.com/docs/en/latest/OpenConnectorFramework/DataSourceConnectors/Denodo/DenodoOCFConnectorOverview.html)
+- [Connection explanation by Denodo](https://community.denodo.com/kb/en/view/document/How%20to%20integrate%20Alation%20with%20Denodo)
 
 Supported Authentications methods:
 
@@ -33,7 +35,7 @@ Alation automatically extracts following metadata :
 - Retrieval of data samples from extracted table
 - Retrieval of data samples from extracted columns
 
-But, connector cannot extract:
+**But, connector cannot extract:**
 
 - Column comments
 - Column data types
@@ -68,8 +70,7 @@ Note: Alation assigns an ID to every custom field. The title of the custom field
 
 ### Upload Logical Metadata (ULM) API
 
-This api is deprecated. DO NOT USE IT. (Alation doesn’t recommend using the ULM API.)
-[Upload Logical Metadata (ULM) API](https://developer.alation.com/dev/reference/upload-logical-metadata)
+There is an old api, Upload Logical Metadata (ULM) API. This api is deprecated. DO NOT USE IT. (Alation doesn’t recommend using the ULM API.)
 [Upload Logical Metadata (ULM) API Deprecation](https://docs.alation.com/en/latest/releases/releasenotes/ReleaseNotes20243.html#upload-logical-metadata-ulm-api-deprecation)
 
 ### Relational Integration API
